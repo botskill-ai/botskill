@@ -10,7 +10,10 @@
     "build": "npm run build:client",
     "build:client": "cd client && npm run build",
     "install:all": "npm install && cd client && npm install && cd ../backend && npm install",
-    "start": "cd client && npm run preview"
+    "start": "cd client && npm run preview",
+    "version:patch": "npm version patch --no-git-tag-version",
+    "version:minor": "npm version minor --no-git-tag-version",
+    "version:major": "npm version major --no-git-tag-version"
   },
   "keywords": ["ai", "skills", "agents", "management"],
   "author": "BotSkill Team",

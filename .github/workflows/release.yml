@@ -1,0 +1,85 @@
+# 推送到 release / release/* 分支时自动构建、打 tag 并创建 GitHub Release
+name: Release
+
+on:
+  push:
+    branches:
+      - release
+      - 'release/*'
+      - 'release-v?*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Get version from package.json
+        id: version
+        run: |
+          V=$(node -p "require('./package.json').version")
+          echo "version=$V" >> $GITHUB_OUTPUT
+          echo "tag=v$V" >> $GITHUB_OUTPUT
+
+      - name: Install dependencies
+        run: npm run install:all
+
+      - name: Build client
+        run: npm run build
+
+      - name: Copy client/dist to backend/public
+        run: |
+          mkdir -p backend/public
+          cp -r client/dist/* backend/public/
+
+      - name: Pack backend as botskill-server zip
+        run: |
+          VERSION=${{ steps.version.outputs.tag }}
+          mkdir -p release_build
+          rsync -a \
+            --exclude='node_modules' \
+            --exclude='.env' \
+            --exclude='.env.*' \
+            --exclude='uploads' \
+            --exclude='*.log' \
+            --exclude='.DS_Store' \
+            --exclude='.git' \
+            --exclude='coverage' \
+            --exclude='.nyc_output' \
+            backend/ release_build/
+          cd release_build && zip -r ../botskill-server-$VERSION.zip . && cd ..
+          rm -rf release_build
+
+      - name: Create tag if not exists
+        run: |
+          TAG=${{ steps.version.outputs.tag }}
+          if git rev-parse "$TAG" >/dev/null 2>&1; then
+            echo "Tag $TAG already exists, skipping"
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git tag -a "$TAG" -m "Release $TAG"
+            git push origin "$TAG"
+          fi
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.version.outputs.tag }}
+          generate_release_notes: true
+          skip_duplicate: true
+          files: botskill-server-${{ steps.version.outputs.tag }}.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
