@@ -117,8 +117,9 @@ gh release create v1.0.0 --notes-file CHANGELOG.md
    - `uploads/`（用户上传目录）
    - `*.log`、`.DS_Store`、`.git`、`coverage`、`.nyc_output`
 4. **自动生成 Changelog**：根据「上一版 tag 到当前」的提交，用 [Conventional Commits](https://www.conventionalcommits.org/) 规范生成 Release 说明，并作为该次 Release 的正文。若没有符合规范的提交，则使用简短占位说明。
+5. **Docker 镜像**（可选）：若在仓库中设置变量 `DOCKER_PUSH_ENABLED=true` 并配置 `DOCKERHUB_USERNAME`、`DOCKERHUB_TOKEN`，会构建镜像并推送到 Docker Hub，标签为 `用户名/botskill-server:X.Y.Z` 与 `用户名/botskill-server:latest`。
 
-用户下载 zip 后解压，在目录内执行 `npm install --production` 和 `npm start`（或按你提供的启动方式）即可运行服务。
+用户下载 zip 后解压，在目录内执行 `npm install --production` 和 `npm start`（或按你提供的启动方式）即可运行服务。也可使用 Docker：`docker run -p 3000:3000 你的用户名/botskill-server:latest`。
 
 ---
 
@@ -153,6 +154,18 @@ npm run changelog
 ```
 
 会将「自上次 tag 以来的变更」按规范追加到 `CHANGELOG.md`，然后可一并提交到 release 分支。
+
+### Docker Hub 镜像推送（可选）
+
+若希望发版时自动构建并推送镜像到 Docker Hub，需在仓库中开启并配置：
+
+1. **Variables**：**Settings** → **Secrets and variables** → **Actions** → **Variables** → **New repository variable**
+   - **Name**: `DOCKER_PUSH_ENABLED`，**Value**: `true`
+2. **Secrets**：同上进入 **Secrets** → **New repository secret**，添加：
+   - **Name**: `DOCKERHUB_USERNAME`，**Value**: 你的 Docker Hub 用户名（或组织名）
+   - **Name**: `DOCKERHUB_TOKEN`，**Value**: Docker Hub 的 Access Token（在 [Docker Hub → Account Settings → Security → New Access Token](https://hub.docker.com/settings/security) 创建，需勾选 Read & Write）
+
+配置后，每次 release 流程成功后会多一个 job 构建镜像并推送，镜像名为 `DOCKERHUB_USERNAME/botskill-server:版本号` 与 `DOCKERHUB_USERNAME/botskill-server:latest`。不设置 `DOCKER_PUSH_ENABLED` 或未配置上述 Secrets 时，release 仍会正常完成，仅不执行 Docker 构建与推送。
 
 ---
 
