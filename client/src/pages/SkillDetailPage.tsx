@@ -392,7 +392,7 @@ const SkillDetailPage = () => {
             </h2>
           </div>
           <div className="p-6 md:p-8">
-            <div className="prose prose-sm dark:prose-invert max-w-none prose-headings:font-heading prose-headings:font-semibold prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-table:text-sm prose-th:bg-muted/50 prose-th:px-4 prose-th:py-2 prose-td:px-4 prose-td:py-2">
+            <div className="docs-prose prose prose-sm dark:prose-invert max-w-none prose-headings:font-heading prose-headings:font-semibold prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-table:text-sm prose-th:bg-muted/50 prose-th:px-4 prose-th:py-2 prose-td:px-4 prose-td:py-2">
               {selectedVersion?.content ? (
                 <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeHighlight]}>
                   {selectedVersion.content}
