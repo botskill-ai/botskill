@@ -51,7 +51,7 @@ interface AddSkillModalProps {
 
 export const AddSkillModal = ({ isOpen, mode, onClose, onSuccess }: AddSkillModalProps) => {
   const { t } = useTranslation();
-  const { categories, loading: categoriesLoading } = useCategories();
+  const { categories, loading: categoriesLoading } = useCategories(true, false, true);
   const [step, setStep] = useState<'input' | 'form'>('input');
   const [urlInput, setUrlInput] = useState('');
   const [form, setForm] = useState<SkillFormData>(INITIAL);
