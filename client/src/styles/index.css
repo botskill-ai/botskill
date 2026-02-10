@@ -68,9 +68,22 @@ pre.docs-code code,
   min-width: min-content;
 }
 /* 浅色模式：覆盖 Typography 的 pre { color: gray[200] }，避免 prose-pre:bg-muted 下文字发白 */
-html:not(.dark) .docs-prose pre,
+html:not(.dark) .docs-prose pre {
+  background-color: #f6f8fa !important;
+  color: #24292e !important;
+}
+/* 浅色模式下设置代码块背景透明 */
+html:not(.dark) .docs-prose pre code {
+  background-color: transparent !important;
+}
+/* 浅色模式下确保 hljs 代码块基础文字颜色可见，但保留语法高亮类的颜色 */
 html:not(.dark) .docs-prose pre code.hljs {
+  background-color: transparent !important;
   color: #24292e;
+}
+/* 浅色模式下确保没有语法高亮类的代码元素也可见 */
+html:not(.dark) .docs-prose pre code:not(.hljs):not([class*="hljs-"]) {
+  color: #24292e !important;
 }
 /* 深色模式下代码块文字可读 */
 html.dark pre.docs-code,
