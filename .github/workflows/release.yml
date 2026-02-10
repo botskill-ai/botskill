@@ -46,7 +46,7 @@ jobs:
 
       - name: Pack backend as botskill-server zip
         run: |
-          VERSION=${{ steps.version.outputs.tag }}
+          VERSION=${{ steps.version.outputs.version }}
           mkdir -p release_build
           rsync -a \
             --exclude='node_modules' \
@@ -61,6 +61,14 @@ jobs:
             backend/ release_build/
           cd release_build && zip -r ../botskill-server-$VERSION.zip . && cd ..
           rm -rf release_build
+
+      - name: Generate changelog
+        run: |
+          npx conventional-changelog -p angular -r 0 > release_notes.md || true
+          if [ ! -s release_notes.md ]; then
+            echo "## Changes" > release_notes.md
+            echo "See commit history for details." >> release_notes.md
+          fi
 
       - name: Create tag if not exists
         run: |
@@ -78,8 +86,8 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.version.outputs.tag }}
-          generate_release_notes: true
-          skip_duplicate: true
-          files: botskill-server-${{ steps.version.outputs.tag }}.zip
+          body_path: release_notes.md
+          generate_release_notes: false
+          files: botskill-server-${{ steps.version.outputs.version }}.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

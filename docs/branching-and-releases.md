@@ -80,7 +80,7 @@
    ```
 
 3. **自动执行**
-   - 工作流会读取 `package.json` 的 `version`（如 `1.1.0`），构建前端并复制到 `backend/public/`，打包 backend 为 `botskill-server-v1.1.0.zip`。
+   - 工作流会读取 `package.json` 的 `version`（如 `1.1.0`），构建前端并复制到 `backend/public/`，打包 backend 为 `botskill-server-1.1.0.zip`。
    - 若 tag `v1.1.0` 不存在则自动创建并推送，然后创建 GitHub Release 并上传该 zip。
    - 在仓库 **Releases** 页面可编辑该 Release 的说明（建议写 Changelog）。
 
@@ -111,28 +111,48 @@ gh release create v1.0.0 --notes-file CHANGELOG.md
 
 1. 构建前端：`npm run build`（生成 `client/dist`）。
 2. 将 `client/dist` 复制到 `backend/public/`（后端可直接托管前端静态资源）。
-3. 将整个 backend 目录打包为 **`botskill-server-vX.Y.Z.zip`** 并上传到 Release 附件。打包时已排除：
+3. 将整个 backend 目录打包为 **`botskill-server-X.Y.Z.zip`** 并上传到 Release 附件。打包时已排除：
    - `node_modules`
    - `.env`、`.env.*`
    - `uploads/`（用户上传目录）
    - `*.log`、`.DS_Store`、`.git`、`coverage`、`.nyc_output`
-4. 使用该 tag 的 commit 信息生成 Release 说明草稿（可在网页上再编辑）。
+4. **自动生成 Changelog**：根据「上一版 tag 到当前」的提交，用 [Conventional Commits](https://www.conventionalcommits.org/) 规范生成 Release 说明，并作为该次 Release 的正文。若没有符合规范的提交，则使用简短占位说明。
 
 用户下载 zip 后解压，在目录内执行 `npm install --production` 和 `npm start`（或按你提供的启动方式）即可运行服务。
 
 ---
 
-## 五、Changelog 建议
+## 五、自动 Changelog 与 Conventional Commits
 
-每次发版前在 Release 说明中写清变更，便于用户和后续维护：
+发版时 Release 的说明会**自动根据提交历史生成**，前提是 commit message 遵循 **Conventional Commits** 格式。
 
-- **Added**：新功能
-- **Changed**：行为或接口变更
-- **Fixed**：Bug 修复
-- **Deprecated**：即将废弃的接口
-- **Removed**：已删除的功能
+### 推荐写法
 
-可维护根目录 `CHANGELOG.md`，发版时把对应版本段落复制到 GitHub Release 的 Describe 中。
+- `feat: 新功能描述` → 归入 **Features**
+- `fix: 修复描述` → 归入 **Bug Fixes**
+- `docs: 文档变更`
+- `style: 代码风格、格式（不影响逻辑）`
+- `refactor: 重构`
+- `perf: 性能优化`
+- `chore: 构建/工具/依赖等`
+
+示例：
+
+```text
+feat: 支持技能导出为 Markdown
+fix: 登录后跳转错误
+docs: 更新部署说明
+```
+
+### 本地更新 CHANGELOG.md
+
+若希望仓库里的 `CHANGELOG.md` 也随版本更新，可在发版前在项目根目录执行：
+
+```bash
+npm run changelog
+```
+
+会将「自上次 tag 以来的变更」按规范追加到 `CHANGELOG.md`，然后可一并提交到 release 分支。
 
 ---
 
