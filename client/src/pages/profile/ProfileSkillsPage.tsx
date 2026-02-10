@@ -14,7 +14,7 @@ import { useCategories } from '@/hooks/useCategories';
 const ProfileSkillsPage = () => {
   const { t } = useTranslation();
   const { user, isAuthenticated } = useAuth();
-  const { categories, loading: categoriesLoading } = useCategories();
+  const { categories, loading: categoriesLoading } = useCategories(true, false, true);
   const [skills, setSkills] = useState<any[]>([]);
   const [skillsLoading, setSkillsLoading] = useState(false);
   const [skillsPagination, setSkillsPagination] = useState({ currentPage: 1, totalPages: 0, totalSkills: 0 });
