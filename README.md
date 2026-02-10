@@ -270,6 +270,39 @@ npm run dev:server  # 后端：http://localhost:3001
 - 后端API: http://localhost:3001/api
 - API健康检查: http://localhost:3001/api/health
 
+### 使用 Docker 快速启动
+
+**前提**：已安装并启动 MongoDB。使用 Docker Hub 已发布的 server 镜像启动应用：
+
+```bash
+docker run -d --name botskill-app -p 3000:3000 \
+  -e MONGODB_URI=你的MongoDB连接地址 \
+  -e JWT_SECRET=你的JWT密钥 \
+  -e JWT_REFRESH_SECRET=你的刷新令牌密钥 \
+  botskill-ai/botskill-server:latest
+
+# 首次启动需初始化数据库（管理员、分类、权限等）
+docker exec -it botskill-app node scripts/init-all.js
+```
+
+启动后访问 http://localhost:3000。使用 Compose 一键启动应用+数据库见 [Docker Compose 文档](docs/docker-compose.md)。
+
+**环境变量**
+
+| 变量 | 必填 | 说明 |
+|------|:----:|------|
+| `MONGODB_URI` | 是 | MongoDB 连接地址（用户提供的 URL） |
+| `JWT_SECRET` | 是 | JWT 签名密钥，建议 32 位以上随机串 |
+| `JWT_REFRESH_SECRET` | 是 | 刷新令牌签名密钥 |
+| `JWT_EXPIRES_IN` | 否 | 访问令牌有效期，默认 `7d` |
+| `JWT_REFRESH_EXPIRES_IN` | 否 | 刷新令牌有效期，默认 `30d` |
+| `FRONTEND_URL` | 否 | 前端地址，用于 OAuth 回调，默认 `http://localhost:3000` |
+| `BACKEND_URL` | 否 | 后端地址，用于 OAuth 回调，默认同 `FRONTEND_URL` |
+| `GOOGLE_CLIENT_ID` | 否 | Google OAuth 客户端 ID |
+| `GOOGLE_CLIENT_SECRET` | 否 | Google OAuth 客户端密钥 |
+| `GITHUB_CLIENT_ID` | 否 | GitHub OAuth 客户端 ID |
+| `GITHUB_CLIENT_SECRET` | 否 | GitHub OAuth 客户端密钥 |
+
 ## ⚙️ 环境配置
 
 ### 开发环境
@@ -336,97 +369,99 @@ npm run dev:server  # 后端：http://localhost:3001
 
 ## 🐳 部署指南
 
-### 使用Docker部署
+### 使用 Docker 部署
 
-1. **构建和启动**
+#### 方式一：Docker Compose
 
-```bash
-# 使用Docker Compose（推荐，一键启动应用和数据库）
-docker-compose up -d
+使用 Compose 一键启动应用与 MongoDB，适合本地或单机部署。**完整说明（环境变量、持久化、健康检查、故障排查等）请阅 [Docker Compose 文档](docs/docker-compose.md)。**
 
-# 查看日志
-docker-compose logs -f
+#### 方式二：使用已发布的 Docker 镜像
 
-# 停止服务
-docker-compose down
-
-# 停止服务并删除数据卷（谨慎使用）
-docker-compose down -v
-```
-
-或者手动构建和运行：
+若项目已发布到 Docker Hub，可直接拉取运行（需自行准备 MongoDB）：
 
 ```bash
-# 构建镜像
-docker build -t botskill .
+# 替换 <DOCKERHUB_USER> 为实际用户名或组织名，例如 botskill-ai
+docker pull <DOCKERHUB_USER>/botskill-server:latest
 
-# 运行容器（需要先启动MongoDB）
 docker run -d \
   --name botskill-app \
   -p 3000:3000 \
   -e MONGODB_URI=mongodb://host.docker.internal:27017/botskill \
-  -e JWT_SECRET=your-secret-key \
-  botskill
+  -e JWT_SECRET=your-super-secret-key-at-least-32-chars \
+  -e JWT_REFRESH_SECRET=your-refresh-secret \
+  <DOCKERHUB_USER>/botskill-server:latest
 ```
 
-2. **环境变量配置**
+- **Mac/Windows**：宿主机 MongoDB 可用 `mongodb://host.docker.internal:27017/botskill`
+- **Linux**：需先启动 MongoDB，并将 `host.docker.internal` 改为宿主机 IP 或使用 `--network host` 等
 
-在项目根目录创建 `.env` 文件（或使用 `docker-compose.yml` 中的环境变量）：
-
-```env
-# JWT配置（必须）
-JWT_SECRET=your-super-secret-jwt-key-change-in-production
-JWT_REFRESH_SECRET=your-refresh-token-secret
-
-# OAuth配置（可选）
-GOOGLE_CLIENT_ID=your-google-client-id
-GOOGLE_CLIENT_SECRET=your-google-client-secret
-GITHUB_CLIENT_ID=your-github-client-id
-GITHUB_CLIENT_SECRET=your-github-client-secret
-
-# URL配置
-FRONTEND_URL=http://localhost:3000
-BACKEND_URL=http://localhost:3000
-```
-
-Docker Compose 会自动读取这些环境变量。
-
-3. **访问应用**
-
-启动成功后，访问：
-- 前端应用: http://localhost:3000
-- API接口: http://localhost:3000/api
-- 健康检查: http://localhost:3000/api/health
-
-4. **初始化数据库**
-
-首次启动后，需要初始化数据库：
+#### 方式三：本地构建镜像后运行
 
 ```bash
-# 进入容器执行初始化脚本
-docker-compose exec app node scripts/init-all.js
+# 在项目根目录构建
+docker build -t botskill-server:latest .
 
-# 或使用docker exec
-docker exec -it <container-name> node scripts/init-all.js
+# 运行（需先有 MongoDB）
+docker run -d \
+  --name botskill-app \
+  -p 3000:3000 \
+  -e MONGODB_URI=mongodb://host.docker.internal:27017/botskill \
+  -e JWT_SECRET=your-super-secret-key \
+  -e JWT_REFRESH_SECRET=your-refresh-secret \
+  botskill-server:latest
 ```
 
-5. **数据持久化**
+**初始化数据库**（方式二、三）：
 
-- MongoDB数据会保存在Docker volume `mongo_data` 中
-- 应用上传的文件保存在容器内的 `/app/uploads` 目录
-- 如需持久化上传文件，可以添加volume映射：
+```bash
+docker exec -it botskill-app node scripts/init-all.js
+```
+
+#### Docker 环境变量
+
+| 变量 | 必填 | 说明 |
+|------|------|------|
+| `MONGODB_URI` | 是 | MongoDB 连接串，如 `mongodb://mongo:27017/botskill`（Compose 内）或 `mongodb://host.docker.internal:27017/botskill`（宿主机） |
+| `JWT_SECRET` | 是 | JWT 签名密钥，建议 `openssl rand -base64 32` 生成 |
+| `JWT_REFRESH_SECRET` | 是 | 刷新令牌密钥 |
+| `JWT_EXPIRES_IN` | 否 | 访问令牌有效期，默认 `7d` |
+| `JWT_REFRESH_EXPIRES_IN` | 否 | 刷新令牌有效期，默认 `30d` |
+| `FRONTEND_URL` | 否 | 前端地址（OAuth 回调用），默认 `http://localhost:3000` |
+| `BACKEND_URL` | 否 | 后端地址（OAuth 回调），默认同 `FRONTEND_URL` |
+| `GOOGLE_CLIENT_ID` / `GOOGLE_CLIENT_SECRET` | 否 | Google OAuth |
+| `GITHUB_CLIENT_ID` / `GITHUB_CLIENT_SECRET` | 否 | GitHub OAuth |
+
+使用 Docker Compose 时，在项目根目录创建 `.env` 写入上述变量，Compose 会自动注入。
+
+#### 数据与持久化
+
+- **MongoDB**：Compose 中使用 volume `mongo_data`，数据持久化。
+- **上传文件**：默认在容器内 `/app/uploads`，重启会丢失。需持久化时在 `docker-compose.yml` 的 `app` 下增加：
 
 ```yaml
 volumes:
   - ./uploads:/app/uploads
 ```
 
-6. **健康检查**
+或单独运行容器时：
 
-Docker Compose 配置了健康检查，可以通过以下命令查看：
+```bash
+docker run -d ... -v $(pwd)/uploads:/app/uploads ...
+```
+
+#### 端口与访问
+
+- 应用端口：**3000**（前端 + API 同源，API 路径为 `/api`）
+- 启动后访问：http://localhost:3000  
+- 健康检查：http://localhost:3000/api/health
+
+#### 健康检查
+
+镜像内已配置 `HEALTHCHECK`，Compose 中也有对应配置。查看状态：
 
 ```bash
 docker-compose ps
+docker inspect --format='{{.State.Health.Status}}' <container-name>
 ```
 
 ### 使用Nginx反向代理

@@ -30,66 +30,83 @@ npm run dev
 
 ## Docker 部署（推荐）
 
-项目根目录提供 `Dockerfile`，可将前后端一体构建为单个镜像。
+项目提供多阶段 `Dockerfile`，将前端构建与后端合并为单一镜像，端口 3000 同时提供前端与 `/api` 接口。
 
-### 构建镜像
+### 方式一：Docker Compose（推荐）
+
+应用 + MongoDB 一起启动，适合本地或单机。
 
 ```bash
-cd skills-project
-docker build -t botskill:latest .
+# 项目根目录
+echo "JWT_SECRET=$(openssl rand -base64 32)" >> .env
+echo "JWT_REFRESH_SECRET=$(openssl rand -base64 32)" >> .env
+docker-compose up -d
 ```
 
-### 运行容器
+首次启动后初始化数据库（管理员、分类、权限等）：
 
 ```bash
+docker-compose exec app node scripts/init-all.js
+```
+
+### 方式二：使用 Docker Hub 镜像
+
+前提：本机已安装并启动 MongoDB。若已发布到 Docker Hub，可直接拉取运行：
+
+```bash
+# 将 <DOCKERHUB_USER> 替换为实际用户名/组织名
+docker pull <DOCKERHUB_USER>/botskill-server:latest
+
 docker run -d \
   --name botskill \
   -p 3000:3000 \
-  -e MONGODB_URI=mongodb://host.docker.internal:27017/botskill \
-  -e JWT_SECRET=your-secret-key-at-least-32-chars \
-  botskill:latest
+  -e MONGODB_URI=你的MongoDB连接地址 \
+  -e JWT_SECRET=your-secret-at-least-32-chars \
+  -e JWT_REFRESH_SECRET=your-refresh-secret \
+  <DOCKERHUB_USER>/botskill-server:latest
 ```
 
-- 端口 `3000`：应用入口（前端 + API 同源）
-- `MONGODB_URI`：宿主机 MongoDB 可用 `host.docker.internal`（Mac/Windows）或宿主机 IP
-- 生产环境建议使用外部 MongoDB（如 Atlas）
-
-### Docker Compose 示例
-
-```yaml
-# docker-compose.yml
-version: '3.8'
-services:
-  app:
-    build: .
-    ports:
-      - "3000:3000"
-    environment:
-      NODE_ENV: production
-      MONGODB_URI: mongodb://mongo:27017/botskill
-      JWT_SECRET: ${JWT_SECRET}
-    depends_on:
-      - mongo
-  mongo:
-    image: mongo:7
-    ports:
-      - "27017:27017"
-    volumes:
-      - mongo_data:/data/db
-volumes:
-  mongo_data:
-```
+初始化：
 
 ```bash
-JWT_SECRET=your-secret docker-compose up -d
+docker exec -it botskill node scripts/init-all.js
 ```
 
-### 初始化数据（Docker 内）
+### 方式三：本地构建镜像
 
 ```bash
-docker exec -it botskill node scripts/create-admin.js
-docker exec -it botskill node scripts/seed-permissions-roles.js
+docker build -t botskill-server:latest .
+docker run -d --name botskill -p 3000:3000 \
+  -e MONGODB_URI=你的MongoDB连接地址 \
+  -e JWT_SECRET=your-secret \
+  -e JWT_REFRESH_SECRET=your-refresh-secret \
+  botskill-server:latest
 ```
+
+### Docker 环境变量要点
+
+| 变量 | 必填 | 说明 |
+|------|------|------|
+| MONGODB_URI | 是 | MongoDB 连接地址（用户提供的 URL） |
+| JWT_SECRET | 是 | JWT 密钥，建议 32 字符以上 |
+| JWT_REFRESH_SECRET | 是 | 刷新令牌密钥 |
+| FRONTEND_URL / BACKEND_URL | 否 | OAuth 回调地址，Docker 同源时可省略 |
+| GOOGLE_* / GITHUB_* | 否 | OAuth 客户端 ID/Secret |
+
+### 上传目录持久化
+
+默认上传文件在容器内，重启会丢失。需持久化时挂载 volume：
+
+```bash
+docker run -d ... -v $(pwd)/uploads:/app/uploads ...
+```
+
+或在 `docker-compose.yml` 的 `app` 服务下增加 `volumes: - ./uploads:/app/uploads`。
+
+### 端口与健康检查
+
+- 应用端口：**3000**（前端与 API 同源，API 前缀 `/api`）
+- 健康检查：`GET http://localhost:3000/api/health`，镜像内已配置 `HEALTHCHECK`
 
 ---
 

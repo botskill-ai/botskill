@@ -12,17 +12,26 @@ const DocsPage = () => {
   const [activeSection, setActiveSection] = React.useState<string>('overview');
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['getting-started']));
 
-  // 支持 URL 哈希，如 /docs#api-reference
-  useEffect(() => {
+  // 支持 URL 哈希，如 /docs#api-reference、/docs#deployment
+  const syncSectionFromHash = React.useCallback(() => {
     const hash = window.location.hash.slice(1);
     if (hash && SECTION_IDS.includes(hash as typeof SECTION_IDS[number])) {
       setActiveSection(hash);
-      // 如果点击的是快速开始的子菜单，展开快速开始
       if (hash.startsWith('getting-started-')) {
         setExpandedSections(prev => new Set([...prev, 'getting-started']));
       }
     }
   }, []);
+
+  useEffect(() => {
+    syncSectionFromHash();
+  }, [syncSectionFromHash]);
+
+  // 点击文档内 #deployment 等锚点时可切换章节
+  useEffect(() => {
+    window.addEventListener('hashchange', syncSectionFromHash);
+    return () => window.removeEventListener('hashchange', syncSectionFromHash);
+  }, [syncSectionFromHash]);
 
   const handleSectionClick = (id: string) => {
     setActiveSection(id);
