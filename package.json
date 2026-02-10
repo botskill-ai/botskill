@@ -1,0 +1,21 @@
+{
+  "name": "botskill",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A full-stack application for managing and sharing AI agent skills",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\"",
+    "dev:client": "cd client && npm run dev",
+    "dev:server": "cd backend && npm run dev",
+    "build": "npm run build:client",
+    "build:client": "cd client && npm run build",
+    "install:all": "npm install && cd client && npm install && cd ../backend && npm install",
+    "start": "cd client && npm run preview"
+  },
+  "keywords": ["ai", "skills", "agents", "management"],
+  "author": "BotSkill Team",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^8.2.0"
+  }
+}

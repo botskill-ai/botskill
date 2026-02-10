@@ -1,0 +1,420 @@
+/* highlight.js 代码高亮 - 需在 @tailwind 之前 */
+@import 'highlight.js/styles/github.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 深色模式代码高亮 - GitHub Dark 风格 */
+html.dark .prose pre code.hljs {
+  background: transparent !important;
+  color: #c9d1d9;
+}
+html.dark .prose pre code.hljs .hljs-doctag,
+html.dark .prose pre code.hljs .hljs-keyword,
+html.dark .prose pre code.hljs .hljs-meta .hljs-keyword { color: #ff7b72; }
+html.dark .prose pre code.hljs .hljs-title,
+html.dark .prose pre code.hljs .hljs-title.class_,
+html.dark .prose pre code.hljs .hljs-title.function_ { color: #d2a8ff; }
+html.dark .prose pre code.hljs .hljs-attr,
+html.dark .prose pre code.hljs .hljs-attribute,
+html.dark .prose pre code.hljs .hljs-literal,
+html.dark .prose pre code.hljs .hljs-number,
+html.dark .prose pre code.hljs .hljs-operator,
+html.dark .prose pre code.hljs .hljs-variable { color: #79c0ff; }
+html.dark .prose pre code.hljs .hljs-string,
+html.dark .prose pre code.hljs .hljs-regexp { color: #a5d6ff; }
+html.dark .prose pre code.hljs .hljs-built_in,
+html.dark .prose pre code.hljs .hljs-symbol { color: #ffa657; }
+html.dark .prose pre code.hljs .hljs-comment,
+html.dark .prose pre code.hljs .hljs-formula { color: #8b949e; }
+html.dark .prose pre code.hljs .hljs-name,
+html.dark .prose pre code.hljs .hljs-quote,
+html.dark .prose pre code.hljs .hljs-selector-tag { color: #7ee787; }
+
+/* Markdown 代码块样式优化 */
+.prose pre {
+  @apply my-4 rounded-lg overflow-x-auto border border-border/50;
+  padding: 1rem 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+.prose pre code {
+  padding: 0;
+  font-size: inherit;
+}
+/* 行内代码 */
+.prose :not(pre) > code {
+  @apply px-1.5 py-0.5 rounded bg-muted/80 text-foreground;
+  font-size: 0.875em;
+}
+
+/* 文档页代码块 - 确保正确显示 */
+.prose pre,
+.prose pre code,
+pre.docs-code,
+pre.docs-code code,
+.docs-prose pre,
+.docs-prose pre code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace !important;
+  white-space: pre;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+.prose pre code,
+pre.docs-code code,
+.docs-prose pre code {
+  display: block;
+  min-width: min-content;
+}
+/* 浅色模式：覆盖 Typography 的 pre { color: gray[200] }，避免 prose-pre:bg-muted 下文字发白 */
+html:not(.dark) .docs-prose pre,
+html:not(.dark) .docs-prose pre code.hljs {
+  color: #24292e;
+}
+/* 深色模式下代码块文字可读 */
+html.dark pre.docs-code,
+html.dark pre.docs-code code,
+html.dark .docs-prose pre,
+html.dark .docs-prose pre code {
+  color: hsl(var(--foreground));
+}
+/* 文档页 Markdown 表格 */
+.docs-prose table {
+  @apply w-full border-collapse rounded-lg overflow-hidden border border-border;
+}
+.docs-prose thead th {
+  @apply text-left text-xs font-medium uppercase tracking-wider;
+}
+/* 深色模式下表头文字可见 */
+html.dark .docs-prose thead th {
+  color: hsl(var(--foreground));
+}
+.docs-prose tbody tr {
+  @apply border-t border-border;
+}
+
+/* 暗黑模式下文档页正文字体与颜色 - 修复 prose-invert 与设计系统不一致 */
+html.dark .docs-prose {
+  color: hsl(var(--foreground));
+  font-family: inherit;
+}
+html.dark .docs-prose h1,
+html.dark .docs-prose h2,
+html.dark .docs-prose h3,
+html.dark .docs-prose h4 {
+  color: hsl(var(--foreground));
+}
+html.dark .docs-prose p,
+html.dark .docs-prose li,
+html.dark .docs-prose td,
+html.dark .docs-prose blockquote {
+  color: hsl(var(--foreground));
+}
+html.dark .docs-prose a {
+  color: hsl(var(--primary));
+}
+html.dark .docs-prose strong {
+  color: hsl(var(--foreground));
+}
+
+@layer base {
+  :root {
+    /* 主色调 */
+    --primary-50: 240 82% 95%;
+    --primary-100: 240 82% 90%;
+    --primary-200: 240 82% 80%;
+    --primary-300: 240 82% 70%;
+    --primary-400: 240 82% 55%;
+    --primary-500: 240 82% 45%; /* 主要品牌色 */
+    --primary-600: 240 82% 35%;
+    --primary-700: 240 82% 25%;
+    --primary-800: 240 82% 15%;
+    --primary-900: 240 82% 5%;
+    
+    /* 辅助色调 */
+    --secondary-50: 210 40% 95%;
+    --secondary-100: 210 40% 90%;
+    --secondary-200: 210 40% 80%;
+    --secondary-300: 210 40% 70%;
+    --secondary-400: 210 40% 60%;
+    --secondary-500: 210 40% 45%;
+    --secondary-600: 210 40% 35%;
+    --secondary-700: 210 40% 25%;
+    --secondary-800: 210 40% 15%;
+    --secondary-900: 210 40% 5%;
+    
+    /* 强调色 */
+    --accent-50: 180 60% 95%;
+    --accent-100: 180 60% 90%;
+    --accent-200: 180 60% 80%;
+    --accent-300: 180 60% 70%;
+    --accent-400: 180 60% 60%;
+    --accent-500: 180 60% 50%;
+    --accent-600: 180 60% 40%;
+    --accent-700: 180 60% 30%;
+    --accent-800: 180 60% 20%;
+    --accent-900: 180 60% 10%;
+    
+    /* 背景色 */
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+    
+    /* 卡片背景 */
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+    
+    /* 弹窗背景 */
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+    
+    /* 边框 */
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    
+    /* 按钮 */
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --ring: 215 20.2% 65.1%;
+    
+    --radius: 0.5rem;
+  }
+  
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+    
+    --card: 224 71% 4%;
+    --card-foreground: 213 31% 91%;
+    
+    --popover: 224 71% 4%;
+    --popover-foreground: 213 31% 91%;
+    
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+    
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+    
+    --secondary: 216 34% 17%;
+    --secondary-foreground: 210 40% 98%;
+    
+    --muted: 216 34% 17%;
+    --muted-foreground: 215 20.2% 65.1%;
+    
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+    
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --ring: 216 34% 17%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted) / 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.25);
+  border-radius: 5px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.4);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: hsl(var(--primary-500) / 0.5);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-corner {
+  background: hsl(var(--muted) / 0.5);
+  border-radius: 0 0 4px 0;
+}
+
+/* Firefox 滚动条 */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--muted-foreground) / 0.3) hsl(var(--muted) / 0.5);
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.slide-up {
+  animation: slideUp 0.3s ease-out forwards;
+}
+
+/* 焦点环样式 */
+.focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+}
+
+/* 防止布局偏移 */
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+/* Sonner Toast - 与整体设计风格统一 */
+[data-sonner-toaster] {
+  z-index: 2147483647 !important;
+  top: 80px !important;
+  right: 24px !important;
+  left: auto !important;
+}
+
+@media (max-width: 600px) {
+  [data-sonner-toaster] {
+    top: 80px !important;
+    right: 16px !important;
+    left: 16px !important;
+    width: auto !important;
+  }
+}
+
+[data-sonner-toast] {
+  z-index: 2147483647 !important;
+}
+
+[data-sonner-toaster][data-expanded='true'] [data-sonner-toast] {
+  margin-bottom: 10px;
+}
+
+/* Toast 基础 - 卡片风格 */
+[data-sonner-toast].botskill-toast,
+[data-sonner-toast][data-styled='true'] {
+  position: relative !important;
+  min-width: 320px !important;
+  max-width: 420px !important;
+  padding: 14px 44px 14px 16px !important;
+  background: hsl(var(--card)) !important;
+  border: 1px solid hsl(var(--border)) !important;
+  color: hsl(var(--card-foreground)) !important;
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.02) !important;
+  border-radius: 12px !important;
+  font-family: inherit !important;
+  overflow: hidden !important;
+}
+
+[data-sonner-toast][data-styled='true'] [data-title] {
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+}
+
+[data-sonner-toast][data-styled='true'] [data-description] {
+  font-size: 13px !important;
+  line-height: 1.45 !important;
+  color: hsl(var(--muted-foreground)) !important;
+}
+
+[data-sonner-toast][data-styled='true'] [data-icon] {
+  margin-right: 10px !important;
+}
+
+/* 关闭按钮 - 右侧，极简风格 */
+[data-sonner-toast] .botskill-toast-close,
+[data-sonner-toast][data-styled='true'] [data-close-button] {
+  left: unset !important;
+  right: 10px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  width: 28px !important;
+  height: 28px !important;
+  background: transparent !important;
+  border: none !important;
+  color: hsl(var(--muted-foreground)) !important;
+  border-radius: 6px !important;
+  opacity: 0.7 !important;
+  transition: opacity 0.15s, background 0.15s !important;
+}
+
+[data-sonner-toast] .botskill-toast-close:hover,
+[data-sonner-toast][data-styled='true'] [data-close-button]:hover {
+  background: hsl(var(--accent)) !important;
+  color: hsl(var(--accent-foreground)) !important;
+  opacity: 1 !important;
+}
+
+/* 成功/错误/信息/警告 - 图标颜色 */
+[data-rich-colors='true'][data-sonner-toast][data-type='success'] [data-icon] {
+  color: hsl(142 71% 45%) !important; /* 成功绿 */
+}
+
+.dark [data-rich-colors='true'][data-sonner-toast][data-type='success'] [data-icon] {
+  color: hsl(142 65% 55%) !important; /* 暗色模式下稍亮 */
+}
+
+[data-rich-colors='true'][data-sonner-toast][data-type='error'] [data-icon] {
+  color: hsl(var(--destructive)) !important;
+}
+
+[data-rich-colors='true'][data-sonner-toast][data-type='info'] [data-icon] {
+  color: hsl(var(--primary-500)) !important;
+}
+
+[data-rich-colors='true'][data-sonner-toast][data-type='warning'] [data-icon] {
+  color: hsl(38 92% 50%) !important;
+}

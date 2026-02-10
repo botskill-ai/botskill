@@ -1,0 +1,660 @@
+{
+  "translation": {
+    "home": {
+      "title": "スマートスキルの探索と共有",
+      "subtitle": "開発者がさまざまなスマートスキルを簡単に発見し、共有し、アプリケーションに統合できるオープンなマーケットプレイス",
+      "browseSkills": "スキルを閲覧",
+      "publishSkill": "スキルを公開",
+      "features": {
+        "title": "プラットフォーム機能",
+        "search": {
+          "title": "スマート検索",
+          "desc": "キーワード検索やカテゴリフィルターで必要なスキルを素早く見つけます"
+        },
+        "quality": {
+          "title": "品質保証",
+          "desc": "コミュニティ主導の品質評価システムにより、すべてのスキルが検証されることを保証します"
+        },
+        "docs": {
+          "title": "詳細ドキュメント",
+          "desc": "各スキルには詳細な利用方法ドキュメントとサンプルコードが付属します"
+        }
+      },
+      "latestSkills": "最新スキル",
+      "popularSkills": "人気スキル",
+      "viewMore": "さらに表示 →"
+    },
+    "navigation": {
+      "home": "ホーム",
+      "skills": "スキル",
+      "about": "当社について",
+      "docs": "ドキュメント",
+      "download": "ダウンロード",
+      "blog": "ブログ",
+      "login": "ログイン",
+      "register": "登録",
+      "profile": "プロファイル",
+      "mySkills": "マイスキル",
+      "adminPanel": "管理パネル",
+      "logout": "ログアウト"
+    },
+    "about": {
+      "mission": {
+        "title": "私たちの使命",
+        "description": "BotSkillは、オープンで共有されたスキルエコシステムの構築を目指しています。さまざまなスマートスキルを標準化・モジュール化することで、技術統合の敷居を大幅に下げ、開発者がコアビジネスロジックに集中し、イノベーションを加速できることを信じています。"
+      },
+      "features": {
+        "title": "プラットフォーム機能",
+        "plugAndPlay": {
+          "title": "プラグアンドプレイ",
+          "desc": "標準化されたAPIを数ステップでアプリケーションに統合できます"
+        },
+        "quality": {
+          "desc": "厳格な審査メカニズムとコミュニティ評価システムでスキル品質を確保します"
+        },
+        "community": {
+          "title": "コミュニティ主導",
+          "desc": "開発者コミュニティによって維持され、継続的な最適化とスキル更新が行われます"
+        },
+        "oneClickDeploy": {
+          "title": "ワンクリックデプロイ",
+          "desc": "複数のデプロイ方法をサポートし、異なる環境要件に対応します"
+        },
+        "easyPublish": {
+          "title": "簡単公開",
+          "desc": "シンプルな公開ワークフローにより、開発者が簡単にスキルを共有できます"
+        },
+        "documentation": {
+          "desc": "詳細な利用方法ドキュメントと例で学習コストを削減します"
+        }
+      },
+      "team": {
+        "title": "チーム紹介",
+        "description": "BotSkillは、技術を愛し、開発者エコシステムの発展に尽力するエンジニアたちによって設立されました。私たちは豊富な技術的専門知識と製品経験を持ち、最高品質のスキル共有プラットフォームの創出に注力しています。",
+        "member1": {
+          "name": "張三",
+          "position": "創業者 & CEO"
+        },
+        "member2": {
+          "name": "李四",
+          "position": "CTO"
+        },
+        "member3": {
+          "name": "王五",
+          "position": "チーフアーキテクト"
+        }
+      },
+      "joinUs": {
+        "title": "BotSkillエコシステムに参加",
+        "description": "スキルを探すユーザーでも、スキルを共有したい開発者でも、BotSkillはあなたの参加を歓迎します"
+      }
+    },
+    "auth": {
+      "login": {
+        "title": "アカウントにログイン",
+        "subtitle": "メールアドレスとパスワードを入力してアカウントにアクセスしてください",
+        "email": "メールアドレス",
+        "emailOrUsername": "メールアドレスまたはユーザー名",
+        "emailPlaceholder": "your@email.com またはユーザー名",
+        "password": "パスワード",
+        "forgotPassword": "パスワードをお忘れですか？",
+        "rememberMe": "ログイン状態を保持",
+        "signIn": "ログイン",
+        "loading": "ログイン中...",
+        "noAccount": "アカウントをお持ちではありませんか？",
+        "signUp": "登録",
+        "orContinueWith": "または以下で続行",
+        "continueWithGoogle": "Googleで続行",
+        "continueWithGithub": "GitHubで続行",
+        "success": "ログインに成功しました！",
+        "generalError": "ログイン中にエラーが発生しました"
+      },
+      "register": {
+        "title": "アカウントを作成",
+        "subtitle": "以下の情報を入力してアカウントを作成してください",
+        "username": "ユーザー名",
+        "fullName": "氏名",
+        "email": "メールアドレス",
+        "password": "パスワード",
+        "confirmPassword": "パスワード確認",
+        "passwordRequirement": "パスワードは8文字以上で、大文字・小文字・数字を含む必要があります",
+        "acceptTerms": "私は",
+        "terms": "利用規約",
+        "and": "および",
+        "privacy": "プライバシーポolicies",
+        "signUp": "登録",
+        "hasAccount": "すでにアカウントをお持ちですか？",
+        "signIn": "ログイン",
+        "success": "登録に成功しました！",
+        "passwordMismatch": "パスワードが一致しません",
+        "passwordMinLength": "パスワードは8文字以上である必要があります",
+        "invalidEmail": "有効なメールアドレスを入力してください",
+        "generalError": "登録中にエラーが発生しました",
+        "loading": "登録中..."
+      },
+      "captchaRequired": "認証コードを入力してください"
+    },
+    "captcha": {
+      "label": "認証コード",
+      "placeholder": "認証コードを入力してください",
+      "clickToRefresh": "クリックして認証コードを更新",
+      "refresh": "認証コードを更新",
+      "generateError": "認証コードの生成に失敗しました"
+    },
+    "skills": {
+      "title": "スキルマーケットプレイス",
+      "searchPlaceholder": "スキル名、説明、タグを検索...",
+      "filter": "フィルター",
+      "filterDesc": "フィルター条件と並び順を設定",
+      "sortBy": "並び順",
+      "sort": {
+        "recent": "最新",
+        "popular": "人気",
+        "rating": "評価が高い",
+        "downloads": "ダウンロード数が多い"
+      },
+      "currentFilters": "現在のフィルター",
+      "category": "カテゴリ",
+      "search": "検索",
+      "noFilters": "フィルターが設定されていません",
+      "resetFilters": "リセット",
+      "grid": "グリッド",
+      "list": "リスト",
+      "foundSkills": "{{count}}個のスキルが見つかりました",
+      "downloads": "ダウンロード",
+      "rating": "評価",
+      "author": "作成者",
+      "discover": "開発効率を高める{{count}}以上の高品質スキルを発見",
+      "category": {
+        "all": "すべて",
+        "ai": "AI/ML",
+        "data": "データ処理",
+        "web": "Web開発",
+        "devops": "DevOps",
+        "security": "セキュリティ",
+        "tools": "開発ツール"
+      }
+    },
+    "blog": {
+      "title": "ブログ",
+      "subtitle": "最新の技術記事とチュートリアルを探索",
+      "searchPlaceholder": "ブログを検索...",
+      "allCategories": "すべてのカテゴリ",
+      "noBlogs": "ブログ記事がありません",
+      "readMore": "続きを読む",
+      "views": "回閲覧",
+      "featured": "おすすめ",
+      "categories": {
+        "general": "一般",
+        "technology": "技術",
+        "tutorial": "チュートリアル",
+        "news": "ニュース",
+        "announcement": "お知らせ"
+      }
+    },
+    "profile": {
+      "title": "プロファイル",
+      "mySkills": "マイスキル",
+      "analytics": "分析",
+      "settings": "設定",
+      "username": "ユーザー名",
+      "fullName": "氏名",
+      "email": "メール",
+      "joinDate": "参加日",
+      "bio": "自己紹介",
+      "saveChanges": "変更を保存",
+      "changeAvatar": "アバターを変更",
+      "skillName": "スキル名",
+      "version": "バージョン",
+      "downloads": "ダウンロード",
+      "status": "ステータス",
+      "lastUpdated": "最終更新",
+      "edit": "編集",
+      "delete": "削除",
+      "totalDownloads": "総ダウンロード数",
+      "skillCount": "スキル数",
+      "trend": "ダウンロード傾向",
+      "chartArea": "グラフエリア（開発中）",
+      "trendDesc": "スキル別ダウンロード数（ダウンロード数でソート）",
+      "noDownloadData": "ダウンロードデータがありません",
+      "publishToSeeData": "スキルを公開してダウンロードを獲得するとデータが表示されます",
+      "needPublisherRole": "スキル公開には発行者権限が必要です。管理者に連絡してください。",
+      "noSkillsMatch": "一致するスキルがありません",
+      "manageSkill": "管理",
+      "viewDetails": "詳細を見る"
+    },
+    "admin": {
+      "dashboard": "ダッシュボード",
+      "adminPanel": "管理パネル",
+      "users": "ユーザー",
+      "skills": "スキル",
+      "blogs": "ブログ",
+      "roles": "ロール",
+      "permissions": "権限",
+      "settings": "システム設定",
+      "totalUsers": "総ユーザー数",
+      "totalSkills": "総スキル数",
+      "totalDownloads": "総ダウンロード数",
+      "activeToday": "本日アクティブ",
+      "recentUsers": "最近の登録ユーザー",
+      "pendingSkills": "承認待ちスキル",
+      "approve": "承認",
+      "reject": "却下",
+      "enable": "有効化",
+      "disable": "無効化",
+      "searchUsers": "ユーザーを検索...",
+      "addUser": "ユーザー追加",
+      "addSkill": "スキル追加",
+      "addByUpload": "ファイルをアップロード",
+      "addByUrl": "URLからインポート",
+      "userAddedSuccessfully": "ユーザーが正常に追加されました！",
+      "userAddError": "ユーザー追加中にエラーが発生しました",
+      "userAddNotImplemented": "管理者パネルからのユーザー追加は実装されていません。登録フォームを使用してください。",
+      "userStatusUpdated": "ユーザーのステータスが正常に更新されました！",
+      "userStatusUpdateError": "ユーザーのステータス更新中にエラーが発生しました",
+      "fetchUsersError": "ユーザー取得中にエラーが発生しました",
+      "fetchSkillsError": "スキル取得中にエラーが発生しました",
+      "adminOnly": "管理者のみ",
+      "userRequiredFields": "ユーザー名、メールアドレス、パスワードは必須です",
+      "userCreateSuccess": "ユーザーが正常に作成されました",
+      "userCreateError": "ユーザー作成中にエラーが発生しました",
+      "user": {
+        "username": "ユーザー名",
+        "email": "メールアドレス",
+        "role": "役割",
+        "status": "状態",
+        "skillCount": "スキル数",
+        "downloadCount": "ダウンロード数",
+        "joinDate": "参加日",
+        "active": "アクティブ",
+        "inactive": "非アクティブ"
+      },
+      "role": {
+        "admin": "管理者",
+        "adminLabel": "管理者",
+        "adminDesc": "システムのすべての機能に完全アクセス可能",
+        "user": "一般ユーザー",
+        "userLabel": "ユーザー",
+        "userDesc": "基本的なアクセス権を持つ標準ユーザー",
+        "publisher": "公開者",
+        "publisherLabel": "公開者",
+        "publisherDesc": "スキルの公開と管理が可能"
+      },
+      "editPermission": "権限編集",
+      "rolePermissions": "役割権限",
+      "userRoleAssignment": "ユーザー役割割り当て",
+      "currentRole": "現在の役割",
+      "availableRoles": "利用可能な役割",
+      "update": "更新",
+      "siteSettings": "サイト設定",
+      "siteTitle": "サイトタイトル",
+      "siteDescription": "サイト説明",
+      "securitySettings": "セキュリティ設定",
+      "require2FA": "二段階認証が必要",
+      "require2FADesc": "すべてのユーザーに二段階認証を強制する",
+      "enableEmailVerification": "メール確認を有効化",
+      "enableEmailVerificationDesc": "ユーザーにメールアドレスの確認を要求する",
+      "toggle": "切り替え",
+      "uploadSettings": "アップロード設定",
+      "maxFileSize": "最大ファイルサイズ(MB)",
+      "allowedFileTypes": "許可されたファイル形式",
+      "maintenanceMode": "メンテナンスモード",
+      "siteMaintenance": "サイトをメンテナンスモードにする",
+      "siteMaintenanceDesc": "保守のためにサイトアクセスを一時的に無効化",
+      "searchSkills": "スキルを検索...",
+      "allStatus": "すべてのステータス",
+      "published": "公開済み",
+      "pending": "審査中",
+      "rejected": "却下済み",
+      "draft": "下書き",
+      "archived": "アーカイブ済み",
+      "downloads": "ダウンロード数",
+      "createdAt": "作成日時",
+      "view": "表示",
+      "skillStatus": {
+        "published": "公開済み",
+        "pending": "審査中",
+        "rejected": "却下済み",
+        "draft": "下書き",
+        "archived": "アーカイブ済み"
+      },
+      "noSkillsFound": "スキルが見つかりません",
+      "noUsersFound": "ユーザーが見つかりません",
+      "updateSuccess": "更新成功",
+      "deleteSuccess": "削除成功",
+      "blogsDesc": "ブログ記事の管理と編集",
+      "createBlog": "ブログを作成",
+      "editBlog": "ブログを編集",
+      "noBlogs": "ブログがありません",
+      "titlePlaceholder": "ブログタイトルを入力",
+      "slug": "URLスラッグ",
+      "slugPlaceholder": "自動生成または手動入力",
+      "generateSlug": "生成",
+      "excerpt": "抜粋",
+      "excerptPlaceholder": "ブログ抜粋（オプション）",
+      "contentType": "コンテンツタイプ",
+      "contentPlaceholder": "ブログコンテンツを入力...",
+      "preview": "プレビュー",
+      "coverImage": "カバー画像URL",
+      "coverImagePlaceholder": "画像URLを入力",
+      "tags": "タグ",
+      "tagsPlaceholder": "カンマで区切る、例：技術,チュートリアル",
+      "featured": "おすすめ",
+      "seo": "SEO設定",
+      "seoTitle": "SEOタイトル",
+      "seoTitlePlaceholder": "SEOタイトル（オプション）",
+      "seoDescription": "SEO説明",
+      "seoDescriptionPlaceholder": "SEO説明（オプション）",
+      "title": "タイトル",
+      "author": "作成者",
+      "status": "ステータス",
+      "views": "閲覧数",
+      "createdAt": "作成日時",
+      "actions": "操作",
+      "categories": "カテゴリ管理",
+      "addCategory": "カテゴリを追加",
+      "editCategory": "カテゴリを編集",
+      "noCategories": "カテゴリが見つかりません",
+      "active": "有効",
+      "inactive": "無効",
+      "category": {
+        "name": "カテゴリ名",
+        "displayName": "表示名",
+        "description": "説明",
+        "icon": "アイコン",
+        "order": "順序",
+        "status": "ステータス"
+      },
+      "categoryLabel": "カテゴリ",
+      "resource": "リソース",
+      "resourceHint": "リソースタイプ、例：skill、user、category",
+      "action": "アクション",
+      "actionHint": "アクションタイプ：create（作成）、read（読み取り）、update（更新）、delete（削除）、manage（管理）",
+      "actionLabels": {
+        "create": "作成",
+        "read": "読み取り",
+        "update": "更新",
+        "delete": "削除",
+        "manage": "管理"
+      },
+      "permissionNameHint": "権限名、通常は形式：resource_action、例：skill_create",
+      "permissionDescPlaceholder": "権限の説明、この権限の用途を説明"
+    },
+    "common": {
+      "previous": "前へ",
+      "next": "次へ",
+      "loading": "読み込み中...",
+      "error": "エラー",
+      "success": "成功",
+      "cancel": "キャンセル",
+      "close": "閉じる",
+      "ok": "OK",
+      "confirm": "確定",
+      "deleteConfirm": "本当に削除しますか？この操作は元に戻せません。",
+      "save": "保存",
+      "saving": "保存中...",
+      "download": "ダウンロード",
+      "actions": "操作",
+      "create": "作成",
+      "update": "更新",
+      "back": "戻る"
+    },
+    "editor": {
+      "insertImage": "画像を挿入",
+      "insertImageDesc": "画像をアップロードするか、画像URLを入力してください",
+      "upload": "アップロード",
+      "url": "URL",
+      "insert": "挿入",
+      "clickOrDrag": "クリックまたは画像をここにドラッグ",
+      "imageFormatHint": "JPG、PNG、GIFなどの形式をサポート、最大5MB",
+      "uploading": "アップロード中...",
+      "clickToChange": "クリックして画像を変更",
+      "imageUrl": "画像URL",
+      "invalidImageType": "画像ファイルを選択してください",
+      "imageTooLarge": "画像サイズは5MBを超えることはできません",
+      "uploadSuccess": "画像のアップロードに成功しました",
+      "uploadFailed": "画像のアップロードに失敗しました",
+      "urlRequired": "画像URLを入力してください",
+      "invalidUrl": "有効なURLを入力してください",
+      "toolbar": {
+        "bold": "太字 (Ctrl+B)",
+        "italic": "斜体 (Ctrl+I)",
+        "underline": "下線 (Ctrl+U)",
+        "strikethrough": "取り消し線",
+        "highlight": "ハイライト",
+        "textColor": "テキスト色",
+        "heading1": "見出し 1",
+        "heading2": "見出し 2",
+        "heading3": "見出し 3",
+        "heading4": "見出し 4",
+        "heading5": "見出し 5",
+        "heading6": "見出し 6",
+        "paragraph": "段落",
+        "bulletList": "箇条書き",
+        "orderedList": "番号付きリスト",
+        "blockquote": "引用",
+        "codeBlock": "コードブロック",
+        "alignLeft": "左揃え",
+        "alignCenter": "中央揃え",
+        "alignRight": "右揃え",
+        "alignJustify": "両端揃え",
+        "insertImage": "画像を挿入",
+        "linkUrl": "リンク URL",
+        "setLink": "リンクを設定",
+        "undo": "元に戻す (Ctrl+Z)",
+        "redo": "やり直す (Ctrl+Shift+Z)"
+      }
+    },
+    "pagination": {
+      "pageInfo": "{{currentPage}} / {{totalPages}} ペ",
+      "prev": "前へ",
+      "next": "次へ"
+    },
+    "contact": {
+      "title": "お問い合わせ",
+      "subtitle": "皆様からのフィードバックやご提案をいつでもお待ちしております",
+      "getInTouch": "お問い合わせ",
+      "email": "メール",
+      "feedback": "フィードバック",
+      "feedbackDesc": "以下のフォームからフィードバックを送信してください",
+      "website": "ウェブサイト",
+      "sendMessage": "メッセージを送信",
+      "name": "お名前",
+      "namePlaceholder": "お名前を入力してください",
+      "emailPlaceholder": "your@email.com",
+      "subject": "件名",
+      "subjectPlaceholder": "件名を入力してください",
+      "message": "メッセージ",
+      "messagePlaceholder": "メッセージを入力してください...",
+      "send": "送信",
+      "sending": "送信中...",
+      "submitSuccess": "メッセージを送信しました。できるだけ早くご返信いたします。"
+    },
+    "privacy": {
+      "title": "プライバシーポリシー",
+      "lastUpdated": "最終更新日：2024年1月1日",
+      "introduction": {
+        "title": "1. はじめに",
+        "content": "BotSkill（「当社」「私たち」または「本プラットフォーム」）は、お客様のプライバシー保護に取り組んでいます。本プライバシーポリシーでは、個人情報の収集、使用、保存、保護の方法について説明します。"
+      },
+      "dataCollection": {
+        "title": "2. 情報の収集",
+        "content": "以下の種類の情報を収集する場合があります：",
+        "item1": "アカウント情報：ユーザー名、メールアドレス、パスワード（暗号化保存）",
+        "item2": "プロフィール情報：名前、アバター、自己紹介などの任意情報",
+        "item3": "使用データ：アクセス記録、ダウンロード記録、検索履歴など",
+        "item4": "技術情報：IPアドレス、ブラウザタイプ、デバイス情報など"
+      },
+      "dataUse": {
+        "title": "3. 情報の使用",
+        "content": "収集した情報は以下の目的で使用します：",
+        "item1": "サービスの提供、維持、改善",
+        "item2": "お客様のリクエストと取引の処理",
+        "item3": "重要な通知と更新の送信",
+        "item4": "使用状況の分析によるユーザー体験の改善",
+        "item5": "詐欺、不正使用、セキュリティ問題の検出と防止"
+      },
+      "dataSharing": {
+        "title": "4. 情報の共有",
+        "content": "お客様の個人情報を第三者に販売、取引、または貸与することはありません。以下の場合に情報を共有する場合があります：",
+        "item1": "お客様の明示的な同意がある場合",
+        "item2": "法的要件または法的手続きへの対応",
+        "item3": "当社の権利、財産、またはセキュリティの保護",
+        "item4": "サービスプロバイダーとの共有（機密保持契約に基づく）"
+      },
+      "dataSecurity": {
+        "title": "5. データセキュリティ",
+        "content": "暗号化された送信、安全な保存、アクセス制御など、業界標準のセキュリティ対策を採用して個人情報を保護しています。ただし、インターネット送信や保存方法は100%安全ではありません。"
+      },
+      "yourRights": {
+        "title": "6. お客様の権利",
+        "content": "お客様には以下の権利があります：",
+        "item1": "個人情報へのアクセス、更新、削除",
+        "item2": "データ処理への同意の撤回",
+        "item3": "データエクスポートのリクエスト",
+        "item4": "苦情の提出または質問"
+      },
+      "cookies": {
+        "title": "7. Cookieとトラッキング技術",
+        "content": "Cookieと類似技術を使用して、ユーザー体験の改善、使用状況の分析、パーソナライズされたコンテンツの提供を行います。ブラウザ設定でCookieの設定を管理できます。"
+      },
+      "changes": {
+        "title": "8. ポリシーの変更",
+        "content": "本プライバシーポリシーを随時更新する場合があります。重要な変更はメールまたはウェブサイトの告知で通知します。サービスの継続利用は、更新されたポリシーへの同意を意味します。"
+      },
+      "contact": {
+        "title": "9. お問い合わせ",
+        "content": "本プライバシーポリシーに関するご質問やご懸念がございましたら、以下からお問い合わせください：",
+        "email": "メール："
+      }
+    },
+    "terms": {
+      "title": "利用規約",
+      "lastUpdated": "最終更新日：2024年1月1日",
+      "acceptance": {
+        "title": "1. 規約の承認",
+        "content": "BotSkillプラットフォーム（「サービス」）にアクセスし使用することで、本利用規約に拘束され、遵守することに同意したものとみなされます。これらの規約に同意しない場合は、サービスを使用しないでください。"
+      },
+      "description": {
+        "title": "2. サービスの説明",
+        "content": "BotSkillは、ユーザーがスキルを発見、ダウンロード、公開できるスキル共有プラットフォームです。事前通知なく、いつでもサービスを変更、一時停止、または終了する権利を留保します。"
+      },
+      "account": {
+        "title": "3. ユーザーアカウント",
+        "content": "一部の機能にはアカウント作成が必要です。以下に同意します：",
+        "item1": "正確、完全、最新の情報を提供する",
+        "item2": "アカウント情報のセキュリティと機密性を維持する",
+        "item3": "アカウント下のすべての活動に責任を持つ",
+        "item4": "不正使用を即座に通知する"
+      },
+      "userContent": {
+        "title": "4. ユーザーコンテンツ",
+        "content": "プラットフォームにアップロードするコンテンツのすべての権利を保持します。コンテンツをアップロードすることで、以下を許可します：",
+        "item1": "コンテンツを世界中で使用、複製、配布、表示するライセンス",
+        "item2": "コンテンツをプラットフォーム形式に適合させるために変更する権利",
+        "item3": "本規約に違反するコンテンツを削除する権利"
+      },
+      "prohibited": {
+        "title": "5. 禁止行為",
+        "content": "以下を行わないことに同意します：",
+        "item1": "違法、有害、脅迫的、侮辱的、嫌がらせ、誹謗中傷、下品、またはその他不適切なコンテンツのアップロード",
+        "item2": "第三者の知的財産権の侵害",
+        "item3": "マルウェア、ウイルス、その他の有害なコードの配布",
+        "item4": "システムやデータへの不正アクセスの試み",
+        "item5": "サービスの正常な動作の妨害や破壊"
+      },
+      "intellectualProperty": {
+        "title": "6. 知的財産権",
+        "content": "プラットフォームとそのすべてのコンテンツ（テキスト、グラフィック、ロゴ、アイコン、画像、オーディオクリップ、デジタルダウンロード、ソフトウェアを含むがこれに限定されない）は、BotSkillまたはそのコンテンツプロバイダーの財産であり、著作権、商標、その他の知的財産法によって保護されています。"
+      },
+      "disclaimer": {
+        "title": "7. 免責事項",
+        "content": "サービスは「現状のまま」および「利用可能な状態で」提供されます。サービスが中断なく、適時に、安全で、エラーがないことを保証するものではありません。直接的、間接的、偶発的、または結果的な損害について責任を負いません。"
+      },
+      "termination": {
+        "title": "8. 終了",
+        "content": "本利用規約の違反を含むがこれに限定されない理由により、事前通知なく、いつでもアカウントとサービスへのアクセスを終了または一時停止する権利を留保します。"
+      },
+      "changes": {
+        "title": "9. 規約の変更",
+        "content": "本利用規約をいつでも変更する権利を留保します。重要な変更はメールまたはウェブサイトの告知で通知します。サービスの継続利用は、変更された規約への同意を意味します。"
+      },
+      "contact": {
+        "title": "10. お問い合わせ",
+        "content": "本利用規約に関するご質問がございましたら、以下からお問い合わせください：",
+        "email": "メール："
+      }
+    },
+    "license": {
+      "title": "ライセンス",
+      "subtitle": "BotSkillプラットフォームライセンス情報",
+      "platform": {
+        "title": "プラットフォームライセンス",
+        "content": "BotSkillプラットフォーム自体は著作権で保護されており、すべての権利が留保されています。明示的な書面による許可なしに、プラットフォームの一部を複製、変更、配布、または使用することはできません。"
+      },
+      "skills": {
+        "title": "スキルライセンス",
+        "content": "プラットフォームで公開されるスキルは、異なるライセンスを使用する場合があります。各スキルはSKILL.mdファイルでライセンスを明確に記載する必要があります。一般的なライセンスには以下が含まれます：",
+        "mit": "商用および非商用の使用、変更、配布を許可",
+        "apache": "MITと類似していますが、特許権が含まれます",
+        "gpl": "派生作品もGPLライセンスを使用することを要求",
+        "bsd": "使用を許可しますが、著作権表示の保持が必要",
+        "proprietary": "使用が制限されるプロプライエタリライセンス"
+      },
+      "userRights": {
+        "title": "ユーザーの権利",
+        "content": "ユーザーとして、以下の権利があります：",
+        "item1": "ライセンスに従ってスキルをダウンロードおよび使用する",
+        "item2": "スキルのソースコードを表示する（提供されている場合）",
+        "item3": "スキルライセンスに従ってスキルを変更および配布する",
+        "item4": "ライセンス違反を報告する"
+      },
+      "publisherRights": {
+        "title": "公開者の権利",
+        "content": "公開者として、以下が可能です：",
+        "item1": "公開するスキルのすべての権利を保持する",
+        "item2": "オープンソースまたはプロプライエタリライセンスを選択できる",
+        "item3": "いつでもスキルを更新または削除できる",
+        "item4": "公開するコンテンツに責任を持ち、第三者の権利を侵害しないことを確保する"
+      },
+      "compliance": {
+        "title": "コンプライアンス",
+        "content": "すべてのユーザーと公開者は以下を遵守する必要があります：",
+        "item1": "各スキルのライセンス条項を尊重する",
+        "item2": "スキルを使用する際にすべての適用される法律および規制を遵守する",
+        "item3": "他人の知的財産権を侵害するスキルを公開しない",
+        "item4": "スキルでライセンス情報を明確に記載する"
+      },
+      "violations": {
+        "title": "ライセンス違反",
+        "content": "ライセンス違反を発見した場合、以下を留保します：",
+        "item1": "違反コンテンツを削除する",
+        "item2": "違反アカウントを一時停止または終了する",
+        "item3": "法的手続きに協力する"
+      },
+      "contact": {
+        "title": "お問い合わせ",
+        "content": "ライセンスに関するご質問や違反の報告が必要な場合は、以下からお問い合わせください：",
+        "email": "メール："
+      }
+    },
+    "footer": {
+      "description": "開発者とスマートスキルをつなぐ橋渡しを行い、技術をより使いやすくします。",
+      "product": {
+        "title": "プロダクト",
+        "cli": "CLIツール"
+      },
+      "company": {
+        "title": "会社",
+        "contact": "お問い合わせ"
+      },
+      "legal": {
+        "title": "法律",
+        "privacy": "プライバシーポリシー",
+        "terms": "利用規約",
+        "license": "ライセンス"
+      },
+      "copyright": "著作権所有。"
+    }
+  }
+}

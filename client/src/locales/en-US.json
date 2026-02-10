@@ -1,0 +1,765 @@
+{
+  "translation": {
+    "home": {
+      "title": "Explore and Share Smart Skills",
+      "subtitle": "An open marketplace where developers can easily discover, share, and integrate various smart skills into their applications",
+      "browseSkills": "Browse Skills",
+      "publishSkill": "Publish Skill",
+      "features": {
+        "title": "Platform Features",
+        "search": {
+          "title": "Smart Search",
+          "desc": "Quickly find the skills you need, with keyword search and category filtering"
+        },
+        "quality": {
+          "title": "Quality Assurance",
+          "desc": "Community-driven quality evaluation system to ensure every skill is verified"
+        },
+        "docs": {
+          "title": "Detailed Documentation",
+          "desc": "Each skill comes with detailed usage documentation and sample code"
+        }
+      },
+      "latestSkills": "Latest Skills",
+      "popularSkills": "Popular Skills",
+      "viewMore": "View More →"
+    },
+    "navigation": {
+      "home": "Home",
+      "skills": "Skills",
+      "about": "About",
+      "docs": "Documentation",
+      "download": "Download",
+      "blog": "Blog",
+      "login": "Sign In",
+      "register": "Sign Up",
+      "profile": "Profile",
+      "mySkills": "My Skills",
+      "adminPanel": "Admin Panel",
+      "logout": "Logout"
+    },
+    "download": {
+      "title": "Download BotSkill",
+      "subtitle": "Choose the installation method that suits your environment",
+      "systemRequirements": "System Requirements",
+      "systemRequirementsNote": "The following are the minimum system requirements for deploying BotSkill Server. If your environment cannot meet the minimum system requirements, it may cause BotSkill Server to fail to deploy and start.",
+      "requirements": {
+        "nodejs": "Node.js",
+        "cpu": "CPU",
+        "memory": "Memory",
+        "storage": "Storage",
+        "mongodb": "MongoDB",
+        "os": "Operating System"
+      },
+      "stableVersions": "Stable Versions",
+      "stable": "Stable",
+      "binaryPackage": "Binary Package Download",
+      "dockerImage": "Docker Image",
+      "download": "Download",
+      "releaseNotes": "Release Notes",
+      "referenceDocs": "Reference Documentation",
+      "otherMethods": "Other Download Methods",
+      "gitClone": "Git Clone",
+      "npmInstall": "NPM Install",
+      "dockerPull": "Docker Pull",
+      "licenseNote": "License Notice",
+      "licenseText": "Distributed under Apache License v2.0. For more historical version downloads, please refer to the release history."
+    },
+    "auth": {
+      "login": {
+        "title": "Sign In",
+        "subtitle": "Sign in to your account",
+        "email": "Email",
+        "emailOrUsername": "Email or Username",
+        "emailPlaceholder": "your@email.com or username",
+        "password": "Password",
+        "forgotPassword": "Forgot password?",
+        "rememberMe": "Remember me",
+        "signIn": "Sign In",
+        "loading": "Signing in...",
+        "noAccount": "Don't have an account?",
+        "signUp": "Sign Up",
+        "orContinueWith": "Or continue with",
+        "continueWithGoogle": "Continue with Google",
+        "continueWithGithub": "Continue with GitHub",
+        "success": "Login successful!",
+        "generalError": "An error occurred during login"
+      },
+      "register": {
+        "title": "Sign Up",
+        "subtitle": "Fill in the following information to create your account",
+        "username": "Username",
+        "fullName": "Full Name",
+        "email": "Email Address",
+        "password": "Password",
+        "confirmPassword": "Confirm Password",
+        "passwordRequirement": "Password must be at least 8 characters with uppercase, lowercase letters and numbers",
+        "acceptTerms": "I agree to the",
+        "terms": "Terms of Service",
+        "and": "and",
+        "privacy": "Privacy Policy",
+        "signUp": "Sign Up",
+        "hasAccount": "Already have an account?",
+        "signIn": "Sign In",
+        "success": "Registration successful!",
+        "passwordMismatch": "Passwords do not match",
+        "passwordMinLength": "Password must be at least 8 characters long",
+        "invalidEmail": "Please enter a valid email address",
+        "generalError": "An error occurred during registration",
+        "loading": "Signing up..."
+      },
+      "captchaRequired": "Please enter the captcha"
+    },
+    "captcha": {
+      "label": "Captcha",
+      "placeholder": "Please enter the captcha",
+      "clickToRefresh": "Click to refresh captcha",
+      "refresh": "Refresh captcha",
+      "generateError": "Failed to generate captcha"
+    },
+    "skills": {
+      "title": "Skills Marketplace",
+      "discover": "Discover high-quality skills to boost your development efficiency",
+      "searchPlaceholder": "Search skill names, descriptions, or tags...",
+      "filter": "Filter",
+      "filterDesc": "Set filter conditions and sort order",
+      "sortBy": "Sort By",
+      "sort": {
+        "recent": "Latest",
+        "popular": "Hottest",
+        "rating": "Highest Rated",
+        "downloads": "Most Downloaded"
+      },
+      "currentFilters": "Current Filters",
+      "category": "Category",
+      "search": "Search",
+      "noFilters": "No filters applied",
+      "resetFilters": "Reset",
+      "grid": "Grid",
+      "list": "List",
+      "foundSkills": "Found {{count}} skills",
+      "empty": "No skills yet",
+      "fetchError": "Failed to fetch skills",
+      "downloads": "Downloads",
+      "rating": "Rating",
+      "author": "Author",
+      "version": "Version",
+      "category": {
+        "all": "All",
+        "ai": "AI/ML",
+        "data": "Data Processing",
+        "web": "Web Development",
+        "devops": "DevOps",
+        "security": "Security",
+        "tools": "Development Tools"
+      },
+      "backToList": "Back to Skills",
+      "selectVersion": "Select Version",
+      "documentation": "Documentation",
+      "noDocumentation": "No documentation available",
+      "viewOnGitHub": "GitHub",
+      "repository": "Repository",
+      "repositoryUrl": "GitHub / Repository URL",
+      "demo": "Demo",
+      "copyInstall": "Copy install command",
+      "copySuccess": "Copied to clipboard",
+      "copyFailed": "Copy failed"
+    },
+    "blog": {
+      "title": "Blog",
+      "subtitle": "Explore the latest tech articles and tutorials",
+      "searchPlaceholder": "Search blogs...",
+      "allCategories": "All Categories",
+      "noBlogs": "No blog posts yet",
+      "readMore": "Read More",
+      "views": "views",
+      "featured": "Featured",
+      "categories": {
+        "general": "General",
+        "technology": "Technology",
+        "tutorial": "Tutorial",
+        "news": "News",
+        "announcement": "Announcement"
+      }
+    },
+    "profile": {
+      "title": "Profile",
+      "mySkills": "My Skills",
+      "analytics": "Analytics",
+      "settings": "Settings",
+      "username": "Username",
+      "fullName": "Full Name",
+      "email": "Email",
+      "joinDate": "Join Date",
+      "bio": "Bio",
+      "saveChanges": "Save Changes",
+      "changeAvatar": "Change Avatar",
+      "skillName": "Skill Name",
+      "version": "Version",
+      "downloads": "Downloads",
+      "status": "Status",
+      "lastUpdated": "Last Updated",
+      "edit": "Edit",
+      "delete": "Delete",
+      "totalDownloads": "Total Downloads",
+      "skillCount": "Skill Count",
+      "trend": "Download Trend",
+      "chartArea": "Chart area (coming soon)",
+      "trendDesc": "Downloads per skill (sorted by download count)",
+      "noDownloadData": "No download data yet",
+      "publishToSeeData": "Publish skills and get downloads to see data",
+      "saveSuccess": "Saved successfully",
+      "saveFailed": "Save failed",
+      "needPublisherRole": "Publisher role required to publish skills. Contact admin to upgrade.",
+      "noSkillsMatch": "No matching skills",
+      "manageSkill": "Manage",
+      "viewDetails": "View Details",
+      "avatarUrl": "Avatar URL",
+      "bioPlaceholder": "Tell us about yourself...",
+      "settingsComingSoon": "Settings coming soon...",
+      "versionManagement": "Version Management",
+      "versionHistory": "Version History",
+      "setDefault": "Set Default",
+      "favorites": "My Favorites",
+      "favoritesEmpty": "No favorites yet",
+      "removeFavorite": "Remove from favorites",
+      "removedFromFavorites": "Removed from favorites",
+      "removeFailed": "Failed to remove",
+      "addToFavorites": "Add to favorites",
+      "addedToFavorites": "Added to favorites",
+      "favoriteFailed": "Operation failed"
+    },
+    "admin": {
+      "dashboard": "Dashboard",
+      "adminPanel": "Admin Panel",
+      "backToSite": "Back to Site",
+      "users": "Users",
+      "skills": "Skills",
+      "blogs": "Blogs",
+      "roles": "Roles",
+      "permissions": "Permissions",
+      "settings": "System Settings",
+      "totalUsers": "Total Users",
+      "totalSkills": "Total Skills",
+      "totalDownloads": "Total Downloads",
+      "activeToday": "Active Today",
+      "refreshStats": "Refresh Stats",
+      "fetchStatsError": "Failed to fetch stats",
+      "fetchSettingsError": "Failed to load settings",
+      "recentUsers": "Recent Users",
+      "pendingSkills": "Pending Skills",
+      "approve": "Approve",
+      "reject": "Reject",
+      "enable": "Enable",
+      "disable": "Disable",
+      "searchUsers": "Search users...",
+      "addUser": "Add User",
+      "addSkill": "Add Skill",
+      "uploadSkillHint": "Upload a skill package (.zip, .tar.gz) or SKILL.md file. After parsing, review and save.",
+      "parsing": "Parsing...",
+      "uploadOrDrop": "Click or drag file here",
+      "parseSuccess": "Parsed successfully. Review and save.",
+      "reupload": "Re-upload",
+      "addByUpload": "Upload file",
+      "addByUrl": "Import from URL",
+      "urlSkillHint": "Enter a remote URL or GitHub repo URL. Download and parse, then save. Version defaults to latest.",
+      "fetchAndParse": "Fetch & Parse",
+      "reenterUrl": "Re-enter URL",
+      "addVersionHint": "If skill exists, adds new version; otherwise creates new skill",
+      "userAddedSuccessfully": "User added successfully!",
+      "userAddError": "Error adding user",
+      "userAddNotImplemented": "User addition via admin panel is not implemented. Use the registration form instead.",
+      "userStatusUpdated": "User status updated successfully!",
+      "userStatusUpdateError": "Error updating user status",
+      "fetchUsersError": "Error fetching users",
+      "fetchSkillsError": "Error fetching skills",
+      "editUser": "Edit User",
+      "resetPassword": "Reset Password",
+      "resetPasswordFor": "Reset password for",
+      "newPassword": "New Password",
+      "userUpdateSuccess": "User updated successfully",
+      "userUpdateError": "Error updating user",
+      "passwordResetSuccess": "Password reset successfully",
+      "passwordResetError": "Error resetting password",
+      "userDeleteSuccess": "User deleted successfully",
+      "userDeleteError": "Error deleting user",
+      "deleteUserConfirm": "Are you sure you want to delete this user? This action cannot be undone.",
+      "userRequiredFields": "Username, email, and password are required",
+      "userCreateSuccess": "User created successfully",
+      "userCreateError": "Error creating user",
+      "user": {
+        "username": "Username",
+        "email": "Email",
+        "role": "Role",
+        "status": "Status",
+        "skillCount": "Skills",
+        "downloadCount": "Downloads",
+        "joinDate": "Join Date",
+        "active": "Active",
+        "inactive": "Inactive"
+      },
+      "role": {
+        "admin": "Administrator",
+        "adminLabel": "Admin",
+        "adminDesc": "Has full access to all system functions",
+        "user": "Regular User",
+        "userLabel": "User",
+        "userDesc": "Standard user with basic access rights",
+        "publisher": "Publisher",
+        "publisherLabel": "Publisher",
+        "publisherDesc": "Can publish and manage skills"
+      },
+      "editPermission": "Edit Permission",
+      "rolePermissions": "Role Permissions",
+      "userRoleAssignment": "User Role Assignment",
+      "currentRole": "Current Role",
+      "availableRoles": "Available Roles",
+      "update": "Update",
+      "siteSettings": "Site Settings",
+      "siteTitle": "Site Title",
+      "siteDescription": "Site Description",
+      "securitySettings": "Security Settings",
+      "require2FA": "Require 2-Factor Authentication",
+      "require2FADesc": "Force all users to enable two-factor authentication",
+      "enableEmailVerification": "Enable Email Verification",
+      "enableEmailVerificationDesc": "Require users to verify their email addresses",
+      "toggle": "Toggle",
+      "uploadSettings": "Upload Settings",
+      "maxFileSize": "Maximum File Size (MB)",
+      "allowedFileTypes": "Allowed File Types",
+      "maintenanceMode": "Maintenance Mode",
+      "siteMaintenance": "Put Site in Maintenance Mode",
+      "siteMaintenanceDesc": "Temporarily disable site access for maintenance",
+      "searchSkills": "Search skills...",
+      "allStatus": "All Status",
+      "published": "Published",
+      "pending": "Pending",
+      "rejected": "Rejected",
+      "draft": "Draft",
+      "archived": "Archived",
+      "downloads": "Downloads",
+      "createdAt": "Created At",
+      "view": "View",
+      "skillStatus": {
+        "published": "Published",
+        "pending": "Pending Review",
+        "rejected": "Rejected",
+        "draft": "Draft",
+        "archived": "Archived"
+      },
+      "adminOnly": "Admin only",
+      "noSkillsFound": "No skills found",
+      "noUsersFound": "No users found",
+      "addPermission": "Add Permission",
+      "permissionName": "Permission Name",
+      "permissionDesc": "Description",
+      "categoryLabel": "Category",
+      "resource": "Resource",
+      "resourceHint": "Resource type, e.g.: skill, user, category",
+      "action": "Action",
+      "actionHint": "Action type: create, read, update, delete, manage",
+      "actionLabels": {
+        "create": "Create",
+        "read": "Read",
+        "update": "Update",
+        "delete": "Delete",
+        "manage": "Manage"
+      },
+      "permissionNameHint": "Permission name, usually in format: resource_action, e.g. skill_create",
+      "permissionDescPlaceholder": "Permission description, explain what this permission is for",
+      "addRole": "Add Role",
+      "roleName": "Role Name",
+      "roleDesc": "Description",
+      "assignPermissions": "Assign Permissions",
+      "save": "Save",
+      "delete": "Delete",
+      "edit": "Edit",
+      "createSuccess": "Created successfully",
+      "versionExistsConfirm": "Version {{version}} already exists. Overwrite the old version?",
+      "reuploadVersionHint": "Select a version to re-upload its skill package",
+      "reuploadVersion": "Re-upload this version",
+      "reuploadVersionFile": "Upload .zip / .tar.gz / .md to overwrite this version",
+      "updateSuccess": "Updated successfully",
+      "deleteSuccess": "Deleted successfully",
+      "blogsDesc": "Manage and edit blog posts",
+      "createBlog": "Create Blog",
+      "editBlog": "Edit Blog",
+      "noBlogs": "No blogs yet",
+      "titlePlaceholder": "Enter blog title",
+      "slug": "URL Slug",
+      "slugPlaceholder": "Auto-generated or enter manually",
+      "generateSlug": "Generate",
+      "excerpt": "Excerpt",
+      "excerptPlaceholder": "Blog excerpt (optional)",
+      "contentType": "Content Type",
+      "contentPlaceholder": "Enter blog content...",
+      "preview": "Preview",
+      "coverImage": "Cover Image URL",
+      "coverImagePlaceholder": "Enter image URL",
+      "tags": "Tags",
+      "tagsPlaceholder": "Separate with commas, e.g.: Tech, Tutorial",
+      "featured": "Featured",
+      "seo": "SEO Settings",
+      "seoTitle": "SEO Title",
+      "seoTitlePlaceholder": "SEO title (optional)",
+      "seoDescription": "SEO Description",
+      "seoDescriptionPlaceholder": "SEO description (optional)",
+      "title": "Title",
+      "author": "Author",
+      "status": "Status",
+      "views": "Views",
+      "createdAt": "Created At",
+      "actions": "Actions",
+      "basicInfo": "Basic Information",
+      "publishSettings": "Publish Settings",
+      "settings": "Settings",
+      "blogSettingsDesc": "Configure blog publish settings, categories, tags, and other information",
+      "untitledBlog": "Untitled Blog",
+      "contentInfo": "Content Information",
+      "optional": "Optional",
+      "tagsHint": "Separate multiple tags with commas",
+      "categories": "Categories",
+      "addCategory": "Add Category",
+      "editCategory": "Edit Category",
+      "noCategories": "No categories found",
+      "active": "Active",
+      "inactive": "Inactive",
+      "category": {
+        "name": "Name",
+        "displayName": "Display Name",
+        "description": "Description",
+        "icon": "Icon",
+        "order": "Order",
+        "status": "Status"
+      }
+    },
+    "about": {
+      "mission": {
+        "title": "Our Mission",
+        "description": "BotSkill is committed to building an open and shared skills ecosystem. We believe that by standardizing and modularizing various smart skills, we can greatly lower the threshold for technology integration, allowing developers to focus more on core business logic and accelerate innovation."
+      },
+      "features": {
+        "title": "Platform Features",
+        "plugAndPlay": {
+          "title": "Plug and Play",
+          "desc": "Standardized APIs that can be integrated into your application in just a few simple steps"
+        },
+        "quality": {
+          "desc": "Strict review mechanisms and community evaluation systems to ensure skill quality"
+        },
+        "community": {
+          "title": "Community Driven",
+          "desc": "Maintained by the developer community with continuous optimization and skill updates"
+        },
+        "oneClickDeploy": {
+          "title": "One-Click Deployment",
+          "desc": "Supports multiple deployment methods to meet different environment requirements"
+        },
+        "easyPublish": {
+          "title": "Easy Publishing",
+          "desc": "Simple publishing workflow that allows developers to easily share skills"
+        },
+        "documentation": {
+          "desc": "Detailed usage documentation and examples to reduce learning costs"
+        }
+      },
+      "team": {
+        "title": "Team Introduction",
+        "description": "BotSkill was founded by a group of engineers who love technology and are dedicated to promoting developer ecosystem development. We have rich technical expertise and product experience, focusing on creating the highest quality skill sharing platform.",
+        "member1": {
+          "name": "Zhang San",
+          "position": "Founder & CEO"
+        },
+        "member2": {
+          "name": "Li Si",
+          "position": "CTO"
+        },
+        "member3": {
+          "name": "Wang Wu",
+          "position": "Chief Architect"
+        }
+      },
+      "joinUs": {
+        "title": "Join the BotSkill Ecosystem",
+        "description": "Whether you are a user looking for skills or a developer willing to share skills, BotSkill welcomes your participation"
+      }
+    },
+    "common": {
+      "previous": "Previous",
+      "next": "Next",
+      "retry": "Retry",
+      "loading": "Loading...",
+      "error": "Error",
+      "success": "Success",
+      "cancel": "Cancel",
+      "close": "Close",
+      "ok": "OK",
+      "confirm": "Confirm",
+      "deleteConfirm": "Are you sure you want to delete this? This action cannot be undone.",
+      "save": "Save",
+      "saving": "Saving...",
+      "download": "Download",
+      "actions": "Actions",
+      "create": "Create",
+      "update": "Update",
+      "back": "Back"
+    },
+    "editor": {
+      "insertImage": "Insert Image",
+      "insertImageDesc": "Upload an image or enter an image URL",
+      "upload": "Upload",
+      "url": "URL",
+      "insert": "Insert",
+      "clickOrDrag": "Click or drag image here",
+      "imageFormatHint": "Supports JPG, PNG, GIF, etc., max 5MB",
+      "uploading": "Uploading...",
+      "clickToChange": "Click to change image",
+      "imageUrl": "Image URL",
+      "invalidImageType": "Please select an image file",
+      "imageTooLarge": "Image size cannot exceed 5MB",
+      "uploadSuccess": "Image uploaded successfully",
+      "uploadFailed": "Image upload failed",
+      "urlRequired": "Please enter image URL",
+      "invalidUrl": "Please enter a valid URL",
+      "toolbar": {
+        "bold": "Bold (Ctrl+B)",
+        "italic": "Italic (Ctrl+I)",
+        "underline": "Underline (Ctrl+U)",
+        "strikethrough": "Strikethrough",
+        "highlight": "Highlight",
+        "textColor": "Text Color",
+        "heading1": "Heading 1",
+        "heading2": "Heading 2",
+        "heading3": "Heading 3",
+        "heading4": "Heading 4",
+        "heading5": "Heading 5",
+        "heading6": "Heading 6",
+        "paragraph": "Paragraph",
+        "bulletList": "Bullet List",
+        "orderedList": "Ordered List",
+        "blockquote": "Quote",
+        "codeBlock": "Code Block",
+        "alignLeft": "Align Left",
+        "alignCenter": "Align Center",
+        "alignRight": "Align Right",
+        "alignJustify": "Justify",
+        "insertImage": "Insert Image",
+        "linkUrl": "Link URL",
+        "setLink": "Set Link",
+        "undo": "Undo (Ctrl+Z)",
+        "redo": "Redo (Ctrl+Shift+Z)"
+      }
+    },
+    "pagination": {
+      "pageInfo": "Page {{currentPage}} of {{totalPages}}",
+      "prev": "Previous",
+      "next": "Next"
+    },
+    "contact": {
+      "title": "Contact Us",
+      "subtitle": "We'd love to hear from you. Your feedback and suggestions are always welcome",
+      "getInTouch": "Get in Touch",
+      "email": "Email",
+      "feedback": "Feedback",
+      "feedbackDesc": "Submit your feedback through the form below",
+      "website": "Website",
+      "sendMessage": "Send Message",
+      "name": "Name",
+      "namePlaceholder": "Please enter your name",
+      "emailPlaceholder": "your@email.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "Please enter subject",
+      "message": "Message",
+      "messagePlaceholder": "Please enter your message...",
+      "send": "Send",
+      "sending": "Sending...",
+      "submitSuccess": "Message sent! We'll get back to you as soon as possible."
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "lastUpdated": "Last Updated: January 1, 2024",
+      "introduction": {
+        "title": "1. Introduction",
+        "content": "BotSkill (\"we\", \"our\", or \"this platform\") is committed to protecting your privacy. This privacy policy explains how we collect, use, store, and protect your personal information."
+      },
+      "dataCollection": {
+        "title": "2. Information Collection",
+        "content": "We may collect the following types of information:",
+        "item1": "Account information: username, email address, password (encrypted storage)",
+        "item2": "Profile information: name, avatar, bio, and other optional information",
+        "item3": "Usage data: access records, download records, search history, etc.",
+        "item4": "Technical information: IP address, browser type, device information, etc."
+      },
+      "dataUse": {
+        "title": "3. Information Use",
+        "content": "We use the collected information for the following purposes:",
+        "item1": "Provide, maintain, and improve our services",
+        "item2": "Process your requests and transactions",
+        "item3": "Send important notifications and updates",
+        "item4": "Analyze usage to improve user experience",
+        "item5": "Detect and prevent fraud, abuse, and security issues"
+      },
+      "dataSharing": {
+        "title": "4. Information Sharing",
+        "content": "We do not sell, trade, or rent your personal information to third parties. We may share information in the following circumstances:",
+        "item1": "With your explicit consent",
+        "item2": "Legal requirements or in response to legal proceedings",
+        "item3": "To protect our rights, property, or security",
+        "item4": "Sharing with service providers (subject to confidentiality agreements)"
+      },
+      "dataSecurity": {
+        "title": "5. Data Security",
+        "content": "We employ industry-standard security measures to protect your personal information, including encrypted transmission, secure storage, and access controls. However, no method of internet transmission or storage is 100% secure."
+      },
+      "yourRights": {
+        "title": "6. Your Rights",
+        "content": "You have the right to:",
+        "item1": "Access, update, or delete your personal information",
+        "item2": "Withdraw consent for data processing",
+        "item3": "Request data export",
+        "item4": "File complaints or raise questions"
+      },
+      "cookies": {
+        "title": "7. Cookies and Tracking Technologies",
+        "content": "We use cookies and similar technologies to improve user experience, analyze usage, and provide personalized content. You can manage cookie preferences through your browser settings."
+      },
+      "changes": {
+        "title": "8. Policy Changes",
+        "content": "We may update this privacy policy from time to time. Significant changes will be notified via email or website announcements. Continued use of our services indicates your acceptance of the updated policy."
+      },
+      "contact": {
+        "title": "9. Contact Us",
+        "content": "If you have any questions or concerns about this privacy policy, please contact us through:",
+        "email": "Email: "
+      }
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "lastUpdated": "Last Updated: January 1, 2024",
+      "acceptance": {
+        "title": "1. Acceptance of Terms",
+        "content": "By accessing and using the BotSkill platform (\"Service\"), you agree to be bound by and comply with these Terms of Service. If you do not agree to these terms, please do not use our Service."
+      },
+      "description": {
+        "title": "2. Service Description",
+        "content": "BotSkill is a skill sharing platform that allows users to discover, download, and publish skills. We reserve the right to modify, suspend, or terminate the Service at any time without prior notice."
+      },
+      "account": {
+        "title": "3. User Accounts",
+        "content": "Creating an account is required for certain features. You agree to:",
+        "item1": "Provide accurate, complete, and up-to-date information",
+        "item2": "Maintain the security and confidentiality of your account information",
+        "item3": "Be responsible for all activities under your account",
+        "item4": "Immediately notify us of any unauthorized use"
+      },
+      "userContent": {
+        "title": "4. User Content",
+        "content": "You retain all rights to the content you upload to the platform. By uploading content, you grant us:",
+        "item1": "A license to use, copy, distribute, and display the content worldwide",
+        "item2": "The right to modify content to adapt it to the platform format",
+        "item3": "The right to remove content that violates these terms"
+      },
+      "prohibited": {
+        "title": "5. Prohibited Conduct",
+        "content": "You agree not to:",
+        "item1": "Upload illegal, harmful, threatening, abusive, harassing, defamatory, vulgar, or otherwise objectionable content",
+        "item2": "Infringe on any third party's intellectual property rights",
+        "item3": "Distribute malware, viruses, or other harmful code",
+        "item4": "Attempt unauthorized access to systems or data",
+        "item5": "Interfere with or disrupt the normal operation of the Service"
+      },
+      "intellectualProperty": {
+        "title": "6. Intellectual Property",
+        "content": "The platform and all its content (including but not limited to text, graphics, logos, icons, images, audio clips, digital downloads, and software) are the property of BotSkill or its content providers, protected by copyright, trademark, and other intellectual property laws."
+      },
+      "disclaimer": {
+        "title": "7. Disclaimer",
+        "content": "The Service is provided \"as is\" and \"as available\". We do not guarantee that the Service will be uninterrupted, timely, secure, or error-free. We are not liable for any direct, indirect, incidental, or consequential damages."
+      },
+      "termination": {
+        "title": "8. Termination",
+        "content": "We reserve the right to terminate or suspend your account and access to the Service at any time without prior notice, including but not limited to violations of these Terms of Service."
+      },
+      "changes": {
+        "title": "9. Changes to Terms",
+        "content": "We reserve the right to modify these Terms of Service at any time. Significant changes will be notified via email or website announcements. Continued use of the Service indicates your acceptance of the modified terms."
+      },
+      "contact": {
+        "title": "10. Contact Us",
+        "content": "If you have any questions about these Terms of Service, please contact us through:",
+        "email": "Email: "
+      }
+    },
+    "license": {
+      "title": "License",
+      "subtitle": "BotSkill Platform License Information",
+      "platform": {
+        "title": "Platform License",
+        "content": "The BotSkill platform itself is copyright protected, all rights reserved. No part of the platform may be copied, modified, distributed, or used without explicit written permission."
+      },
+      "skills": {
+        "title": "Skill Licenses",
+        "content": "Skills published on the platform may use different licenses. Each skill should clearly state its license in the SKILL.md file. Common licenses include:",
+        "mit": "Allows commercial and non-commercial use, modification, and distribution",
+        "apache": "Similar to MIT, but includes patent grant",
+        "gpl": "Requires derivative works to also use GPL license",
+        "bsd": "Allows use but requires copyright notice retention",
+        "proprietary": "Proprietary license with restricted use"
+      },
+      "userRights": {
+        "title": "User Rights",
+        "content": "As a user, you have the right to:",
+        "item1": "Download and use skills in accordance with their licenses",
+        "item2": "View the source code of skills (if provided)",
+        "item3": "Modify and distribute skills according to their licenses",
+        "item4": "Report license violations"
+      },
+      "publisherRights": {
+        "title": "Publisher Rights",
+        "content": "As a publisher, you:",
+        "item1": "Retain all rights to the skills you publish",
+        "item2": "May choose any open source or proprietary license",
+        "item3": "May update or delete your skills at any time",
+        "item4": "Are responsible for the content you publish, ensuring no infringement of third-party rights"
+      },
+      "compliance": {
+        "title": "Compliance",
+        "content": "All users and publishers must comply with:",
+        "item1": "Respecting the license terms of each skill",
+        "item2": "Complying with all applicable laws and regulations when using skills",
+        "item3": "Not publishing skills that infringe on others' intellectual property",
+        "item4": "Clearly stating license information in skills"
+      },
+      "violations": {
+        "title": "License Violations",
+        "content": "If we discover any license violations, we reserve the right to:",
+        "item1": "Remove violating content",
+        "item2": "Suspend or terminate violating accounts",
+        "item3": "Cooperate with legal proceedings"
+      },
+      "contact": {
+        "title": "Contact Us",
+        "content": "If you have any questions about licenses or need to report violations, please contact us through:",
+        "email": "Email: "
+      }
+    },
+    "footer": {
+      "description": "Bridging developers and smart skills, making technology more accessible.",
+      "product": {
+        "title": "Product",
+        "cli": "CLI Tool"
+      },
+      "company": {
+        "title": "Company",
+        "contact": "Contact Us"
+      },
+      "legal": {
+        "title": "Legal",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service",
+        "license": "License"
+      },
+      "copyright": "All rights reserved."
+    }
+  }
+}

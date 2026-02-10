@@ -1,0 +1,780 @@
+{
+  "translation": {
+    "home": {
+      "title": "探索和分享智能技能",
+      "subtitle": "一个开放的技能市场，让开发者能够轻松发现、分享和集成各种智能技能到他们的应用中",
+      "browseSkills": "浏览技能",
+      "publishSkill": "发布技能",
+      "features": {
+        "title": "平台功能",
+        "search": {
+          "title": "智能搜索",
+          "desc": "快速找到你需要的技能，支持关键词搜索和分类筛选"
+        },
+        "quality": {
+          "title": "质量保证",
+          "desc": "社区驱动的质量评估体系，确保每个技能都经过验证"
+        },
+        "docs": {
+          "title": "详细文档",
+          "desc": "每个技能都配有详细的使用文档和示例代码"
+        }
+      },
+      "latestSkills": "最新技能",
+      "popularSkills": "热门技能",
+      "viewMore": "查看更多 →"
+    },
+    "navigation": {
+      "home": "首页",
+      "skills": "技能库",
+      "about": "关于",
+      "docs": "文档",
+      "download": "下载",
+      "blog": "博客",
+      "login": "登录",
+      "register": "注册",
+      "profile": "个人资料",
+      "mySkills": "我的技能",
+      "adminPanel": "管理面板",
+      "logout": "退出登录"
+    },
+    "download": {
+      "title": "下载 BotSkill",
+      "subtitle": "选择适合您环境的安装方式",
+      "systemRequirements": "系统要求",
+      "systemRequirementsNote": "以下是部署 BotSkill Server 的最小系统要求。如果您的环境无法满足系统最小要求，可能会导致无法部署和启动 BotSkill Server。",
+      "requirements": {
+        "nodejs": "Node.js",
+        "nodejsDesc": "16.x 及以上版本",
+        "cpu": "CPU",
+        "cpuDesc": "1核及以上，支持64位CPU",
+        "memory": "内存",
+        "memoryDesc": "2GB及以上",
+        "storage": "硬盘",
+        "storageDesc": "无最小要求，根据保留日志自行调整",
+        "mongodb": "MongoDB",
+        "mongodbDesc": "4.4 及以上版本",
+        "os": "操作系统",
+        "osDesc": "Linux, Mac OS X, Windows"
+      },
+      "stableVersions": "稳定版本",
+      "stable": "稳定版",
+      "binaryPackage": "二进制包下载",
+      "dockerImage": "Docker 镜像",
+      "download": "下载",
+      "releaseNotes": "发布说明",
+      "referenceDocs": "参考文档",
+      "otherMethods": "其他下载方式",
+      "gitClone": "Git 克隆",
+      "npmInstall": "NPM 安装",
+      "dockerPull": "Docker 拉取",
+      "licenseNote": "许可证说明",
+      "licenseText": "基于 Apache License v2.0 分发版本。更多历史版本下载，请参考发布历史。"
+    },
+    "auth": {
+      "login": {
+        "title": "登录",
+        "subtitle": "输入您的邮箱或用户名和密码来访问账户",
+        "email": "邮箱地址",
+        "emailOrUsername": "邮箱或用户名",
+        "emailPlaceholder": "your@email.com 或用户名",
+        "password": "密码",
+        "forgotPassword": "忘记密码？",
+        "rememberMe": "记住我",
+        "signIn": "登录",
+        "loading": "登录中...",
+        "noAccount": "还没有账户？",
+        "signUp": "注册新账户",
+        "orContinueWith": "或继续使用",
+        "continueWithGoogle": "使用 Google 登录",
+        "continueWithGithub": "使用 GitHub 登录",
+        "success": "登录成功！",
+        "generalError": "登录过程中发生错误"
+      },
+      "register": {
+        "title": "注册",
+        "subtitle": "填写以下信息来创建您的账户",
+        "username": "用户名",
+        "fullName": "全名",
+        "email": "邮箱地址",
+        "password": "密码",
+        "confirmPassword": "确认密码",
+        "passwordRequirement": "密码至少需要8个字符，包含大小写字母和数字",
+        "acceptTerms": "我同意",
+        "terms": "服务条款",
+        "and": "和",
+        "privacy": "隐私政策",
+        "signUp": "注册",
+        "hasAccount": "已有账户？",
+        "signIn": "登录",
+        "success": "注册成功！",
+        "passwordMismatch": "两次输入的密码不一致",
+        "passwordMinLength": "密码至少需要8个字符",
+        "invalidEmail": "请输入有效的邮箱地址",
+        "generalError": "注册过程中发生错误",
+        "loading": "注册中..."
+      },
+      "captchaRequired": "请输入验证码"
+    },
+    "captcha": {
+      "label": "验证码",
+      "placeholder": "请输入验证码",
+      "clickToRefresh": "点击刷新验证码",
+      "refresh": "刷新验证码",
+      "generateError": "生成验证码失败"
+    },
+    "skills": {
+      "title": "技能库",
+      "discover": "探索高质量技能，提升开发效率",
+      "searchPlaceholder": "搜索技能名称、描述或标签...",
+      "filter": "筛选",
+      "filterDesc": "设置筛选条件和排序方式",
+      "sortBy": "排序方式",
+      "sort": {
+        "recent": "最新",
+        "popular": "最热",
+        "rating": "评分最高",
+        "downloads": "下载最多"
+      },
+      "currentFilters": "当前筛选条件",
+      "category": "分类",
+      "search": "搜索",
+      "noFilters": "暂无筛选条件",
+      "resetFilters": "重置",
+      "grid": "网格",
+      "list": "列表",
+      "foundSkills": "找到 {{count}} 个技能",
+      "empty": "暂无技能",
+      "fetchError": "获取技能失败",
+      "downloads": "下载",
+      "rating": "评分",
+      "author": "作者",
+      "version": "版本",
+      "category": {
+        "all": "全部",
+        "ai": "AI/ML",
+        "data": "数据处理",
+        "web": "Web开发",
+        "devops": "DevOps",
+        "security": "安全",
+        "tools": "开发工具"
+      },
+      "backToList": "返回技能库",
+      "selectVersion": "选择版本",
+      "documentation": "文档",
+      "noDocumentation": "暂无文档内容",
+      "viewOnGitHub": "GitHub",
+      "repository": "仓库",
+      "repositoryUrl": "GitHub / 仓库链接",
+      "demo": "演示",
+      "copyInstall": "复制安装命令",
+      "copySuccess": "已复制到剪贴板",
+      "copyFailed": "复制失败"
+    },
+    "blog": {
+      "title": "博客",
+      "subtitle": "探索最新的技术文章和教程",
+      "searchPlaceholder": "搜索博客...",
+      "allCategories": "所有分类",
+      "noBlogs": "暂无博客文章",
+      "readMore": "阅读更多",
+      "views": "次浏览",
+      "featured": "精选",
+      "categories": {
+        "general": "通用",
+        "technology": "技术",
+        "tutorial": "教程",
+        "news": "新闻",
+        "announcement": "公告"
+      }
+    },
+    "profile": {
+      "title": "个人资料",
+      "mySkills": "我的技能",
+      "analytics": "数据统计",
+      "settings": "设置",
+      "username": "用户名",
+      "fullName": "全名",
+      "email": "邮箱",
+      "joinDate": "加入日期",
+      "bio": "个人简介",
+      "saveChanges": "保存更改",
+      "changeAvatar": "更换头像",
+      "skillName": "技能名称",
+      "version": "版本",
+      "downloads": "下载量",
+      "status": "状态",
+      "lastUpdated": "最后更新",
+      "edit": "编辑",
+      "delete": "删除",
+      "totalDownloads": "总下载量",
+      "skillCount": "技能数量",
+      "trend": "下载趋势",
+      "chartArea": "图表区域（开发中）",
+      "trendDesc": "各技能下载量分布（按下载量排序）",
+      "noDownloadData": "暂无下载数据",
+      "publishToSeeData": "发布技能并获得下载后即可查看",
+      "saveSuccess": "保存成功",
+      "saveFailed": "保存失败",
+      "needPublisherRole": "发布技能需要发布者权限，请联系管理员升级账户。",
+      "noSkillsMatch": "暂无匹配的技能",
+      "manageSkill": "管理",
+      "viewDetails": "查看详情",
+      "avatarUrl": "头像 URL",
+      "bioPlaceholder": "介绍一下自己...",
+      "settingsComingSoon": "设置功能开发中...",
+      "versionManagement": "版本管理",
+      "versionHistory": "版本历史",
+      "setDefault": "设为默认",
+      "favorites": "我的收藏",
+      "favoritesEmpty": "暂无收藏",
+      "removeFavorite": "取消收藏",
+      "removedFromFavorites": "已取消收藏",
+      "removeFailed": "取消收藏失败",
+      "addToFavorites": "收藏",
+      "addedToFavorites": "已添加收藏",
+      "favoriteFailed": "操作失败"
+    },
+    "admin": {
+      "dashboard": "仪表板",
+      "adminPanel": "管理面板",
+      "backToSite": "返回站点",
+      "users": "用户管理",
+      "skills": "技能管理",
+      "blogs": "博客管理",
+      "roles": "角色管理",
+      "permissions": "权限管理",
+      "settings": "系统设置",
+      "totalUsers": "总用户数",
+      "totalSkills": "技能总数",
+      "totalDownloads": "总下载量",
+      "activeToday": "今日活跃",
+      "refreshStats": "刷新统计",
+      "fetchStatsError": "获取统计失败",
+      "fetchSettingsError": "获取设置失败",
+      "recentUsers": "最近注册用户",
+      "pendingSkills": "待审核技能",
+      "approve": "通过",
+      "reject": "拒绝",
+      "enable": "启用",
+      "disable": "禁用",
+      "searchUsers": "搜索用户...",
+      "addUser": "添加用户",
+      "addSkill": "添加技能",
+      "uploadSkillHint": "请上传技能文件包（.zip、.tar.gz）或 SKILL.md 文件，解析成功后即可填写并保存",
+      "parsing": "解析中...",
+      "uploadOrDrop": "点击或拖拽文件到此处",
+      "parseSuccess": "解析成功，请确认信息后保存",
+      "reupload": "重新上传",
+      "addByUpload": "上传文件",
+      "addByUrl": "从URL导入",
+      "urlSkillHint": "输入远程地址或 GitHub 仓库地址，下载并解析后即可保存。版本默认 latest。",
+      "fetchAndParse": "获取并解析",
+      "reenterUrl": "重新输入",
+      "addVersionHint": "若技能已存在，将添加新版本；否则创建新技能",
+      "userAddedSuccessfully": "用户添加成功！",
+      "userAddError": "添加用户时出错",
+      "userAddNotImplemented": "管理员面板暂不支持添加用户。请使用注册表单。",
+      "userStatusUpdated": "用户状态更新成功！",
+      "userStatusUpdateError": "更新用户状态时出错",
+      "fetchUsersError": "获取用户时出错",
+      "fetchSkillsError": "获取技能时出错",
+      "editUser": "编辑用户",
+      "resetPassword": "重置密码",
+      "resetPasswordFor": "为以下用户重置密码",
+      "newPassword": "新密码",
+      "userUpdateSuccess": "用户更新成功",
+      "userUpdateError": "更新用户时出错",
+      "passwordResetSuccess": "密码重置成功",
+      "passwordResetError": "重置密码时出错",
+      "userDeleteSuccess": "用户删除成功",
+      "userDeleteError": "删除用户时出错",
+      "deleteUserConfirm": "确定要删除该用户吗？此操作不可撤销。",
+      "userRequiredFields": "用户名、邮箱和密码为必填项",
+      "userCreateSuccess": "用户创建成功",
+      "userCreateError": "创建用户失败",
+      "user": {
+        "username": "用户名",
+        "email": "邮箱",
+        "role": "角色",
+        "status": "状态",
+        "skillCount": "技能数",
+        "downloadCount": "下载量",
+        "joinDate": "加入日期",
+        "active": "活跃",
+        "inactive": "非活跃"
+      },
+      "role": {
+        "admin": "管理员",
+        "adminLabel": "管理员",
+        "adminDesc": "拥有系统所有功能的完全访问权限",
+        "user": "普通用户",
+        "userLabel": "用户",
+        "userDesc": "具有基本访问权限的标准用户",
+        "publisher": "发布者",
+        "publisherLabel": "发布者",
+        "publisherDesc": "可以发布和管理技能"
+      },
+      "editPermission": "编辑权限",
+      "rolePermissions": "角色权限",
+      "userRoleAssignment": "用户角色分配",
+      "currentRole": "当前角色",
+      "availableRoles": "可用角色",
+      "update": "更新",
+      "siteSettings": "站点设置",
+      "siteTitle": "站点标题",
+      "siteDescription": "站点描述",
+      "securitySettings": "安全设置",
+      "require2FA": "需要两步验证",
+      "require2FADesc": "强制所有用户启用两步验证",
+      "enableEmailVerification": "启用邮箱验证",
+      "enableEmailVerificationDesc": "要求用户验证他们的邮箱地址",
+      "toggle": "切换",
+      "uploadSettings": "上传设置",
+      "maxFileSize": "最大文件大小(MB)",
+      "allowedFileTypes": "允许的文件类型",
+      "maintenanceMode": "维护模式",
+      "siteMaintenance": "将站点置于维护模式",
+      "siteMaintenanceDesc": "临时禁用站点访问以进行维护",
+      "searchSkills": "搜索技能...",
+      "allStatus": "所有状态",
+      "published": "已发布",
+      "pending": "待审核",
+      "rejected": "已拒绝",
+      "draft": "草稿",
+      "archived": "已归档",
+      "blogsDesc": "管理和编辑博客文章",
+      "createBlog": "创建博客",
+      "editBlog": "编辑博客",
+      "basicInfo": "基本信息",
+      "publishSettings": "发布设置",
+      "settings": "设置",
+      "blogSettingsDesc": "配置博客的发布设置、分类、标签等信息",
+      "untitledBlog": "未命名博客",
+      "contentInfo": "内容信息",
+      "optional": "可选",
+      "tagsHint": "使用逗号分隔多个标签",
+      "noBlogs": "暂无博客",
+      "confirmDelete": "确定要删除吗？",
+      "deleteSuccess": "删除成功",
+      "updateSuccess": "更新成功",
+      "createSuccess": "创建成功",
+      "requiredFields": "请填写必填字段",
+      "title": "标题",
+      "titlePlaceholder": "输入博客标题",
+      "slug": "URL 别名",
+      "slugPlaceholder": "自动生成或手动输入",
+      "generateSlug": "生成",
+      "excerpt": "摘要",
+      "excerptPlaceholder": "博客摘要（可选）",
+      "contentType": "内容类型",
+      "content": "内容",
+      "contentPlaceholder": "输入博客内容...",
+      "preview": "预览",
+      "coverImage": "封面图片 URL",
+      "coverImagePlaceholder": "输入图片 URL",
+      "tags": "标签",
+      "tagsPlaceholder": "用逗号分隔，如：技术,教程",
+      "category": "分类",
+      "status": "状态",
+      "featured": "精选",
+      "seo": "SEO 设置",
+      "seoTitle": "SEO 标题",
+      "seoTitlePlaceholder": "SEO 标题（可选）",
+      "seoDescription": "SEO 描述",
+      "seoDescriptionPlaceholder": "SEO 描述（可选）",
+      "author": "作者",
+      "views": "浏览量",
+      "createdAt": "创建时间",
+      "downloads": "下载量",
+      "createdAt": "创建时间",
+      "view": "查看",
+      "skillStatus": {
+        "published": "已发布",
+        "pending": "待审核",
+        "rejected": "已拒绝",
+        "draft": "草稿",
+        "archived": "已归档"
+      },
+      "adminOnly": "仅管理员可操作",
+      "noSkillsFound": "未找到技能",
+      "noUsersFound": "未找到用户",
+      "loginRequired": "请先登录",
+      "permissionDenied": "权限不足",
+      "noContent": "暂无内容",
+      "addPermission": "添加权限",
+      "permissionName": "权限名称",
+      "permissionDesc": "描述",
+      "categoryLabel": "分类",
+      "resource": "资源",
+      "resourceHint": "资源类型，如：skill（技能）、user（用户）、category（分类）",
+      "action": "操作",
+      "actionHint": "操作类型：create（创建）、read（读取）、update（更新）、delete（删除）、manage（管理）",
+      "actionLabels": {
+        "create": "创建",
+        "read": "读取",
+        "update": "更新",
+        "delete": "删除",
+        "manage": "管理"
+      },
+      "permissionNameHint": "权限名称，通常格式为：资源_操作，如 skill_create",
+      "permissionDescPlaceholder": "权限描述，说明该权限的用途",
+      "addRole": "添加角色",
+      "roleName": "角色名称",
+      "roleDesc": "描述",
+      "assignPermissions": "分配权限",
+      "save": "保存",
+      "delete": "删除",
+      "edit": "编辑",
+      "createSuccess": "创建成功",
+      "versionExistsConfirm": "版本 {{version}} 已存在，确定要覆盖旧版本吗？",
+      "reuploadVersionHint": "选择版本后可重新上传该版本的技能包",
+      "reuploadVersion": "重新上传该版本",
+      "reuploadVersionFile": "上传 .zip / .tar.gz / .md 覆盖该版本",
+      "updateSuccess": "更新成功",
+      "deleteSuccess": "删除成功",
+      "categories": "分类管理",
+      "addCategory": "添加分类",
+      "editCategory": "编辑分类",
+      "noCategories": "暂无分类",
+      "active": "激活",
+      "inactive": "未激活",
+      "category": {
+        "name": "分类名称",
+        "displayName": "显示名称",
+        "description": "描述",
+        "icon": "图标",
+        "order": "排序",
+        "status": "状态"
+      }
+    },
+    "about": {
+      "mission": {
+        "title": "我们的使命",
+        "description": "BotSkill 致力于构建一个开放、共享的技能生态系统。我们相信，通过将各种智能技能标准化、模块化，可以极大地降低技术集成的门槛，让开发者能够更专注于核心业务逻辑，加速创新。"
+      },
+      "features": {
+        "title": "平台特色",
+        "plugAndPlay": {
+          "title": "即插即用",
+          "desc": "标准化的API接口，简单几步即可集成到您的应用中"
+        },
+        "quality": {
+          "desc": "严格的审核机制和社区评价体系，确保技能质量"
+        },
+        "community": {
+          "title": "社区驱动",
+          "desc": "开发者社区共同维护，持续优化和更新技能"
+        },
+        "oneClickDeploy": {
+          "title": "一键部署",
+          "desc": "支持多种部署方式，满足不同环境需求"
+        },
+        "easyPublish": {
+          "title": "轻松发布",
+          "desc": "简单的发布流程，让开发者轻松分享技能"
+        },
+        "documentation": {
+          "desc": "详细的使用文档和示例，降低学习成本"
+        }
+      },
+      "team": {
+        "title": "团队介绍",
+        "description": "BotSkill 由一群热爱技术、致力于推动开发者生态发展的工程师创立。我们有着丰富的技术积累和产品经验，专注于打造最优质的技能分享平台。",
+        "member1": {
+          "name": "张三",
+          "position": "创始人 & CEO"
+        },
+        "member2": {
+          "name": "李四",
+          "position": "CTO"
+        },
+        "member3": {
+          "name": "王五",
+          "position": "首席架构师"
+        }
+      },
+      "joinUs": {
+        "title": "加入 BotSkill 生态",
+        "description": "无论您是寻找技能的使用者，还是愿意分享技能的开发者，BotSkill 都欢迎您的加入"
+      }
+    },
+    "common": {
+      "previous": "上一页",
+      "next": "下一页",
+      "retry": "重试",
+      "loading": "加载中...",
+      "error": "错误",
+      "success": "成功",
+      "cancel": "取消",
+      "close": "关闭",
+      "ok": "确定",
+      "confirm": "确定",
+      "deleteConfirm": "确定要删除吗？此操作不可撤销。",
+      "save": "保存",
+      "saving": "保存中...",
+      "download": "下载",
+      "actions": "操作",
+      "create": "创建",
+      "update": "更新",
+      "back": "返回"
+    },
+    "editor": {
+      "insertImage": "插入图片",
+      "insertImageDesc": "上传图片或输入图片 URL",
+      "upload": "上传",
+      "url": "URL",
+      "insert": "插入",
+      "clickOrDrag": "点击或拖拽图片到此处",
+      "imageFormatHint": "支持 JPG、PNG、GIF 等格式，最大 5MB",
+      "uploading": "上传中...",
+      "clickToChange": "点击更换图片",
+      "imageUrl": "图片 URL",
+      "invalidImageType": "请选择图片文件",
+      "imageTooLarge": "图片大小不能超过 5MB",
+      "uploadSuccess": "图片上传成功",
+      "uploadFailed": "图片上传失败",
+      "urlRequired": "请输入图片 URL",
+      "invalidUrl": "请输入有效的 URL",
+      "toolbar": {
+        "bold": "加粗 (Ctrl+B)",
+        "italic": "斜体 (Ctrl+I)",
+        "underline": "下划线 (Ctrl+U)",
+        "strikethrough": "删除线",
+        "highlight": "高亮",
+        "textColor": "文本颜色",
+        "heading1": "标题 1",
+        "heading2": "标题 2",
+        "heading3": "标题 3",
+        "heading4": "标题 4",
+        "heading5": "标题 5",
+        "heading6": "标题 6",
+        "paragraph": "段落",
+        "bulletList": "无序列表",
+        "orderedList": "有序列表",
+        "blockquote": "引用",
+        "codeBlock": "代码块",
+        "alignLeft": "左对齐",
+        "alignCenter": "居中",
+        "alignRight": "右对齐",
+        "alignJustify": "两端对齐",
+        "insertImage": "插入图片",
+        "linkUrl": "链接 URL",
+        "setLink": "设置链接",
+        "undo": "撤销 (Ctrl+Z)",
+        "redo": "重做 (Ctrl+Shift+Z)"
+      }
+    },
+    "pagination": {
+      "pageInfo": "第 {{currentPage}} 页，共 {{totalPages}} 页",
+      "prev": "上一页",
+      "next": "下一页"
+    },
+    "contact": {
+      "title": "联系我们",
+      "subtitle": "我们很乐意听到您的声音，随时欢迎您的反馈和建议",
+      "getInTouch": "取得联系",
+      "email": "邮箱",
+      "feedback": "反馈",
+      "feedbackDesc": "通过下面的表单提交您的反馈",
+      "website": "网站",
+      "sendMessage": "发送消息",
+      "name": "姓名",
+      "namePlaceholder": "请输入您的姓名",
+      "emailPlaceholder": "your@email.com",
+      "subject": "主题",
+      "subjectPlaceholder": "请输入主题",
+      "message": "消息",
+      "messagePlaceholder": "请输入您的消息...",
+      "send": "发送",
+      "sending": "发送中...",
+      "submitSuccess": "消息已发送，我们会尽快回复您！"
+    },
+    "privacy": {
+      "title": "隐私政策",
+      "lastUpdated": "最后更新：2024年1月1日",
+      "introduction": {
+        "title": "1. 介绍",
+        "content": "BotSkill（\"我们\"、\"我们的\"或\"本平台\"）致力于保护您的隐私。本隐私政策说明了我们如何收集、使用、存储和保护您的个人信息。"
+      },
+      "dataCollection": {
+        "title": "2. 信息收集",
+        "content": "我们可能收集以下类型的信息：",
+        "item1": "账户信息：用户名、邮箱地址、密码（加密存储）",
+        "item2": "个人资料：姓名、头像、个人简介等可选信息",
+        "item3": "使用数据：访问记录、下载记录、搜索历史等",
+        "item4": "技术信息：IP地址、浏览器类型、设备信息等"
+      },
+      "dataUse": {
+        "title": "3. 信息使用",
+        "content": "我们使用收集的信息用于以下目的：",
+        "item1": "提供、维护和改进我们的服务",
+        "item2": "处理您的请求和交易",
+        "item3": "发送重要通知和更新",
+        "item4": "分析使用情况以改善用户体验",
+        "item5": "检测和防止欺诈、滥用和安全问题"
+      },
+      "dataSharing": {
+        "title": "4. 信息共享",
+        "content": "我们不会出售、交易或出租您的个人信息给第三方。我们可能在以下情况下共享信息：",
+        "item1": "获得您的明确同意",
+        "item2": "法律要求或响应法律程序",
+        "item3": "保护我们的权利、财产或安全",
+        "item4": "与服务提供商共享（受保密协议约束）"
+      },
+      "dataSecurity": {
+        "title": "5. 数据安全",
+        "content": "我们采用行业标准的安全措施来保护您的个人信息，包括加密传输、安全存储和访问控制。然而，没有任何互联网传输或存储方法是100%安全的。"
+      },
+      "yourRights": {
+        "title": "6. 您的权利",
+        "content": "您有权：",
+        "item1": "访问、更新或删除您的个人信息",
+        "item2": "撤回对数据处理的同意",
+        "item3": "请求数据导出",
+        "item4": "提出投诉或问题"
+      },
+      "cookies": {
+        "title": "7. Cookie 和跟踪技术",
+        "content": "我们使用 Cookie 和类似技术来改善用户体验、分析使用情况并提供个性化内容。您可以通过浏览器设置管理 Cookie 偏好。"
+      },
+      "changes": {
+        "title": "8. 政策变更",
+        "content": "我们可能会不时更新本隐私政策。重大变更将通过电子邮件或网站公告通知您。继续使用我们的服务即表示您接受更新后的政策。"
+      },
+      "contact": {
+        "title": "9. 联系我们",
+        "content": "如果您对本隐私政策有任何问题或疑虑，请通过以下方式联系我们：",
+        "email": "邮箱："
+      }
+    },
+    "terms": {
+      "title": "服务条款",
+      "lastUpdated": "最后更新：2024年1月1日",
+      "acceptance": {
+        "title": "1. 接受条款",
+        "content": "通过访问和使用 BotSkill 平台（\"服务\"），您同意遵守并受本服务条款的约束。如果您不同意这些条款，请不要使用我们的服务。"
+      },
+      "description": {
+        "title": "2. 服务描述",
+        "content": "BotSkill 是一个技能分享平台，允许用户发现、下载和发布技能。我们保留随时修改、暂停或终止服务的权利，恕不另行通知。"
+      },
+      "account": {
+        "title": "3. 用户账户",
+        "content": "使用某些功能需要创建账户。您同意：",
+        "item1": "提供准确、完整和最新的信息",
+        "item2": "维护账户信息的安全性和保密性",
+        "item3": "对账户下的所有活动负责",
+        "item4": "立即通知我们任何未经授权的使用"
+      },
+      "userContent": {
+        "title": "4. 用户内容",
+        "content": "您保留对您上传到平台的所有内容的权利。通过上传内容，您授予我们：",
+        "item1": "在全球范围内使用、复制、分发和展示内容的许可",
+        "item2": "修改内容以使其适应平台格式的权利",
+        "item3": "删除违反本条款的内容的权利"
+      },
+      "prohibited": {
+        "title": "5. 禁止行为",
+        "content": "您同意不：",
+        "item1": "上传非法、有害、威胁、辱骂、骚扰、诽谤、粗俗或其他令人反感的内容",
+        "item2": "侵犯任何第三方的知识产权",
+        "item3": "传播恶意软件、病毒或其他有害代码",
+        "item4": "尝试未经授权访问系统或数据",
+        "item5": "干扰或破坏服务的正常运行"
+      },
+      "intellectualProperty": {
+        "title": "6. 知识产权",
+        "content": "平台及其所有内容（包括但不限于文本、图形、徽标、图标、图像、音频剪辑、数字下载和软件）均为 BotSkill 或其内容提供商的财产，受版权、商标和其他知识产权法保护。"
+      },
+      "disclaimer": {
+        "title": "7. 免责声明",
+        "content": "服务按\"现状\"和\"可用\"基础提供。我们不保证服务将无中断、及时、安全或无错误。我们不对任何直接、间接、偶然或后果性损害承担责任。"
+      },
+      "termination": {
+        "title": "8. 终止",
+        "content": "我们保留随时终止或暂停您的账户和访问服务的权利，无需事先通知，原因包括但不限于违反本服务条款。"
+      },
+      "changes": {
+        "title": "9. 条款变更",
+        "content": "我们保留随时修改本服务条款的权利。重大变更将通过电子邮件或网站公告通知您。继续使用服务即表示您接受修改后的条款。"
+      },
+      "contact": {
+        "title": "10. 联系我们",
+        "content": "如果您对本服务条款有任何问题，请通过以下方式联系我们：",
+        "email": "邮箱："
+      }
+    },
+    "license": {
+      "title": "许可证",
+      "subtitle": "BotSkill 平台许可证信息",
+      "platform": {
+        "title": "平台许可证",
+        "content": "BotSkill 平台本身受版权保护，所有权利保留。未经明确书面许可，不得复制、修改、分发或使用平台的任何部分。"
+      },
+      "skills": {
+        "title": "技能许可证",
+        "content": "平台上发布的技能可能使用不同的许可证。每个技能都应在 SKILL.md 文件中明确说明其许可证。常见的许可证包括：",
+        "mit": "允许商业和非商业使用，修改和分发",
+        "apache": "类似 MIT，但包含专利授权",
+        "gpl": "要求衍生作品也使用 GPL 许可证",
+        "bsd": "允许使用，但需保留版权声明",
+        "proprietary": "专有许可证，使用受限制"
+      },
+      "userRights": {
+        "title": "用户权利",
+        "content": "作为用户，您有权：",
+        "item1": "下载和使用符合其许可证的技能",
+        "item2": "查看技能的源代码（如果提供）",
+        "item3": "根据技能许可证修改和分发技能",
+        "item4": "报告违反许可证的行为"
+      },
+      "publisherRights": {
+        "title": "发布者权利",
+        "content": "作为发布者，您：",
+        "item1": "保留对您发布的技能的所有权利",
+        "item2": "可以选择任何开源或专有许可证",
+        "item3": "可以随时更新或删除您的技能",
+        "item4": "对您发布的内容负责，确保不侵犯第三方权利"
+      },
+      "compliance": {
+        "title": "合规性",
+        "content": "所有用户和发布者必须遵守：",
+        "item1": "尊重每个技能的许可证条款",
+        "item2": "在使用技能时遵守所有适用的法律和法规",
+        "item3": "不发布侵犯他人知识产权的技能",
+        "item4": "在技能中明确声明许可证信息"
+      },
+      "violations": {
+        "title": "许可证违规",
+        "content": "如果我们发现任何违反许可证的行为，我们保留：",
+        "item1": "删除违规内容",
+        "item2": "暂停或终止违规账户",
+        "item3": "配合法律程序"
+      },
+      "contact": {
+        "title": "联系我们",
+        "content": "如果您对许可证有任何问题或需要报告违规行为，请通过以下方式联系我们：",
+        "email": "邮箱："
+      }
+    },
+    "footer": {
+      "description": "连接开发者与智能技能的桥梁，让技术更易用。",
+      "product": {
+        "title": "产品",
+        "cli": "CLI工具"
+      },
+      "company": {
+        "title": "公司",
+        "contact": "联系我们"
+      },
+      "legal": {
+        "title": "法律",
+        "privacy": "隐私政策",
+        "terms": "服务条款",
+        "license": "许可证"
+      },
+      "copyright": "保留所有权利。"
+    }
+  }
+}

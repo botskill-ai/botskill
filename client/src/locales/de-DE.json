@@ -1,0 +1,660 @@
+{
+  "translation": {
+    "home": {
+      "title": "Entdecken und Teilen Sie intelligente Fähigkeiten",
+      "subtitle": "Ein offener Marktplatz, auf dem Entwickler verschiedene intelligente Fähigkeiten einfach entdecken, teilen und in ihre Anwendungen integrieren können",
+      "browseSkills": "Fähigkeiten durchsuchen",
+      "publishSkill": "Fähigkeit veröffentlichen",
+      "features": {
+        "title": "Plattformfunktionen",
+        "search": {
+          "title": "Intelligente Suche",
+          "desc": "Finden Sie schnell die benötigten Fähigkeiten mit Stichwortsuche und Kategoriefilterung"
+        },
+        "quality": {
+          "title": "Qualitätssicherung",
+          "desc": "Community-getriebenes Qualitätssystem zur Sicherstellung der Verifizierung jeder Fähigkeit"
+        },
+        "docs": {
+          "title": "Ausführliche Dokumentation",
+          "desc": "Jede Fähigkeit wird mit detaillierter Bedienungsanleitung und Beispielcode geliefert"
+        }
+      },
+      "latestSkills": "Neueste Fähigkeiten",
+      "popularSkills": "Beliebte Fähigkeiten",
+      "viewMore": "Mehr anzeigen →"
+    },
+    "navigation": {
+      "home": "Startseite",
+      "skills": "Fähigkeiten",
+      "about": "Über uns",
+      "docs": "Dokumentation",
+      "download": "Herunterladen",
+      "blog": "Blog",
+      "login": "Anmelden",
+      "register": "Registrieren",
+      "profile": "Profil",
+      "mySkills": "Meine Fähigkeiten",
+      "adminPanel": "Admin-Panel",
+      "logout": "Abmelden"
+    },
+    "about": {
+      "mission": {
+        "title": "Unsere Mission",
+        "description": "BotSkill ist bestrebt, ein offenes und gemeinschaftliches Fähigkeiten-Ökosystem zu schaffen. Wir glauben, dass durch die Standardisierung und Modularisierung verschiedener intelligenter Fähigkeiten die Hürden für die Technologieintegration erheblich gesenkt werden können, sodass sich Entwickler stärker auf die Kerngeschäftslogik konzentrieren und Innovationen beschleunigen können."
+      },
+      "features": {
+        "title": "Plattformfunktionen",
+        "plugAndPlay": {
+          "title": "Steck einfach ein",
+          "desc": "Standardisierte APIs, die in wenigen Schritten in Ihre Anwendung integriert werden können"
+        },
+        "quality": {
+          "desc": "Strenge Prüfmechanismen und Community-Bewertungssysteme zur Sicherstellung der Fähigkeitsqualität"
+        },
+        "community": {
+          "title": "Community-gesteuert",
+          "desc": "Von der Entwickler-Community gewartet mit kontinuierlicher Optimierung und Aktualisierung von Fähigkeiten"
+        },
+        "oneClickDeploy": {
+          "title": "Ein-Klick-Bereitstellung",
+          "desc": "Unterstützt mehrere Bereitstellungsverfahren, um verschiedenen Umgebungsanforderungen gerecht zu werden"
+        },
+        "easyPublish": {
+          "title": "Einfache Veröffentlichung",
+          "desc": "Einfacher Veröffentlichungsworkflow, der Entwicklern das einfache Teilen von Fähigkeiten ermöglicht"
+        },
+        "documentation": {
+          "desc": "Ausführliche Bedienungsanleitung und Beispiele, um den Lernaufwand zu reduzieren"
+        }
+      },
+      "team": {
+        "title": "Teamvorstellung",
+        "description": "BotSkill wurde von einer Gruppe von Ingenieuren gegründet, die Technologie lieben und sich für die Förderung der Entwickler-Ökosystementwicklung einsetzen. Wir haben reiche technische Expertise und Produkterfahrung und konzentrieren uns auf die Schaffung der höchsten Qualität Plattform zum Teilen von Fähigkeiten.",
+        "member1": {
+          "name": "Zhang San",
+          "position": "Gründer & CEO"
+        },
+        "member2": {
+          "name": "Li Si",
+          "position": "CTO"
+        },
+        "member3": {
+          "name": "Wang Wu",
+          "position": "Chefarchitekt"
+        }
+      },
+      "joinUs": {
+        "title": "Treten Sie dem BotSkill-Ökosystem bei",
+        "description": "Ob Sie als Nutzer nach Fähigkeiten suchen oder als Entwickler Fähigkeiten teilen möchten - BotSkill heißt Ihre Teilnahme willkommen"
+      }
+    },
+    "auth": {
+      "login": {
+        "title": "Melden Sie sich bei Ihrem Konto an",
+        "subtitle": "Geben Sie Ihre E-Mail-Adresse und Ihr Passwort ein, um auf Ihr Konto zuzugreifen",
+        "email": "E-Mail-Adresse",
+        "emailOrUsername": "E-Mail oder Benutzername",
+        "emailPlaceholder": "ihre@email.com oder Benutzername",
+        "password": "Passwort",
+        "forgotPassword": "Passwort vergessen?",
+        "rememberMe": "Angemeldet bleiben",
+        "signIn": "Anmelden",
+        "loading": "Anmeldung läuft...",
+        "noAccount": "Sie haben noch kein Konto?",
+        "signUp": "Registrieren",
+        "orContinueWith": "Oder fahren Sie fort mit",
+        "continueWithGoogle": "Mit Google fortfahren",
+        "continueWithGithub": "Mit GitHub fortfahren",
+        "success": "Anmeldung erfolgreich!",
+        "generalError": "Bei der Anmeldung ist ein Fehler aufgetreten"
+      },
+      "register": {
+        "title": "Erstellen Sie ein Konto",
+        "subtitle": "Füllen Sie folgende Informationen aus, um Ihr Konto zu erstellen",
+        "username": "Benutzername",
+        "fullName": "Vollständiger Name",
+        "email": "E-Mail-Adresse",
+        "password": "Passwort",
+        "confirmPassword": "Passwort bestätigen",
+        "passwordRequirement": "Das Passwort muss mindestens 8 Zeichen lang sein und Groß- und Kleinbuchstaben sowie Zahlen enthalten",
+        "acceptTerms": "Ich stimme den",
+        "terms": "Nutzungsbedingungen",
+        "and": "und",
+        "privacy": "Datenschutzrichtlinien",
+        "signUp": "Registrieren",
+        "hasAccount": "Sie haben bereits ein Konto?",
+        "signIn": "Anmelden",
+        "success": "Registrierung erfolgreich!",
+        "passwordMismatch": "Die Passwörter stimmen nicht überein",
+        "passwordMinLength": "Das Passwort muss mindestens 8 Zeichen lang sein",
+        "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+        "generalError": "Bei der Registrierung ist ein Fehler aufgetreten",
+        "loading": "Registrierung läuft..."
+      },
+      "captchaRequired": "Bitte geben Sie den Captcha-Code ein"
+    },
+    "captcha": {
+      "label": "Captcha",
+      "placeholder": "Bitte geben Sie den Captcha-Code ein",
+      "clickToRefresh": "Klicken Sie, um das Captcha zu aktualisieren",
+      "refresh": "Captcha aktualisieren",
+      "generateError": "Fehler beim Generieren des Captchas"
+    },
+    "skills": {
+      "title": "Fähigkeiten-Marktplatz",
+      "searchPlaceholder": "Suchen Sie nach Fähigkeitsnamen, Beschreibungen oder Tags...",
+      "filter": "Filtern",
+      "filterDesc": "Filterbedingungen und Sortierreihenfolge festlegen",
+      "sortBy": "Sortieren nach",
+      "sort": {
+        "recent": "Neueste",
+        "popular": "Beliebteste",
+        "rating": "Höchste Bewertung",
+        "downloads": "Meiste Downloads"
+      },
+      "currentFilters": "Aktuelle Filter",
+      "category": "Kategorie",
+      "search": "Suchen",
+      "noFilters": "Keine Filter angewendet",
+      "resetFilters": "Zurücksetzen",
+      "grid": "Raster",
+      "list": "Liste",
+      "foundSkills": "{{count}} Fähigkeiten gefunden",
+      "downloads": "Downloads",
+      "rating": "Bewertung",
+      "author": "Autor",
+      "discover": "Entdecken Sie über {{count}} hochwertige Fähigkeiten, um Ihre Entwicklungseffizienz zu steigern",
+      "category": {
+        "all": "Alle",
+        "ai": "KI/ML",
+        "data": "Datenverarbeitung",
+        "web": "Webentwicklung",
+        "devops": "DevOps",
+        "security": "Sicherheit",
+        "tools": "Entwicklungstools"
+      }
+    },
+    "blog": {
+      "title": "Blog",
+      "subtitle": "Erkunden Sie die neuesten Tech-Artikel und Tutorials",
+      "searchPlaceholder": "Blogs durchsuchen...",
+      "allCategories": "Alle Kategorien",
+      "noBlogs": "Noch keine Blog-Beiträge",
+      "readMore": "Weiterlesen",
+      "views": "Aufrufe",
+      "featured": "Empfohlen",
+      "categories": {
+        "general": "Allgemein",
+        "technology": "Technologie",
+        "tutorial": "Tutorial",
+        "news": "Nachrichten",
+        "announcement": "Ankündigung"
+      }
+    },
+    "profile": {
+      "title": "Profil",
+      "mySkills": "Meine Fähigkeiten",
+      "analytics": "Analytik",
+      "settings": "Einstellungen",
+      "username": "Benutzername",
+      "fullName": "Vollständiger Name",
+      "email": "E-Mail",
+      "joinDate": "Beitrittsdatum",
+      "bio": "Biografie",
+      "saveChanges": "Änderungen speichern",
+      "changeAvatar": "Avatar ändern",
+      "skillName": "Fähigkeitsname",
+      "version": "Version",
+      "downloads": "Downloads",
+      "status": "Status",
+      "lastUpdated": "Zuletzt aktualisiert",
+      "edit": "Bearbeiten",
+      "delete": "Löschen",
+      "totalDownloads": "Gesamtzahl der Downloads",
+      "skillCount": "Anzahl der Fähigkeiten",
+      "trend": "Download-Trend",
+      "chartArea": "Diagrammbereich (in Kürze)",
+      "trendDesc": "Downloads pro Fähigkeit (nach Anzahl sortiert)",
+      "noDownloadData": "Noch keine Download-Daten",
+      "publishToSeeData": "Veröffentlichen Sie Fähigkeiten und erhalten Sie Downloads, um Daten zu sehen",
+      "needPublisherRole": "Veröffentlichungsberechtigung erforderlich. Kontaktieren Sie den Admin.",
+      "noSkillsMatch": "Keine passenden Fähigkeiten",
+      "manageSkill": "Verwalten",
+      "viewDetails": "Details anzeigen"
+    },
+    "admin": {
+      "dashboard": "Dashboard",
+      "adminPanel": "Admin-Bereich",
+      "users": "Benutzer",
+      "skills": "Fähigkeiten",
+      "blogs": "Blogs",
+      "roles": "Rollen",
+      "permissions": "Berechtigungen",
+      "settings": "Systemeinstellungen",
+      "totalUsers": "Gesamtzahl der Benutzer",
+      "totalSkills": "Gesamtzahl der Fähigkeiten",
+      "totalDownloads": "Gesamtzahl der Downloads",
+      "activeToday": "Heute aktiv",
+      "recentUsers": "Kürzlich registrierte Benutzer",
+      "pendingSkills": "Ausstehende Fähigkeiten",
+      "approve": "Genehmigen",
+      "reject": "Ablehnen",
+      "enable": "Aktivieren",
+      "disable": "Deaktivieren",
+      "searchUsers": "Benutzer suchen...",
+      "addUser": "Benutzer hinzufügen",
+      "addSkill": "Fähigkeit hinzufügen",
+      "addByUpload": "Datei hochladen",
+      "addByUrl": "Von URL importieren",
+      "userAddedSuccessfully": "Benutzer erfolgreich hinzugefügt!",
+      "userAddError": "Fehler beim Hinzufügen des Benutzers",
+      "userAddNotImplemented": "Hinzufügen von Benutzern über das Admin-Panel ist nicht implementiert. Verwenden Sie stattdessen das Registrierungsformular.",
+      "userStatusUpdated": "Benutzerstatus erfolgreich aktualisiert!",
+      "userStatusUpdateError": "Fehler beim Aktualisieren des Benutzerstatus",
+      "fetchUsersError": "Fehler beim Abrufen der Benutzer",
+      "fetchSkillsError": "Fehler beim Abrufen der Fähigkeiten",
+      "adminOnly": "Nur für Administratoren",
+      "userRequiredFields": "Benutzername, E-Mail und Passwort sind erforderlich",
+      "userCreateSuccess": "Benutzer erfolgreich erstellt",
+      "userCreateError": "Fehler beim Erstellen des Benutzers",
+      "user": {
+        "username": "Benutzername",
+        "email": "E-Mail",
+        "role": "Rolle",
+        "status": "Status",
+        "skillCount": "Fähigkeitenanzahl",
+        "downloadCount": "Download-Anzahl",
+        "joinDate": "Beitrittsdatum",
+        "active": "Aktiv",
+        "inactive": "Inaktiv"
+      },
+      "role": {
+        "admin": "Administrator",
+        "adminLabel": "Admin",
+        "adminDesc": "Hat vollen Zugriff auf alle Systemfunktionen",
+        "user": "Regelmäßiger Benutzer",
+        "userLabel": "Benutzer",
+        "userDesc": "Standardbenutzer mit grundlegenden Zugriffsrechten",
+        "publisher": "Veröffentlicher",
+        "publisherLabel": "Veröffentlicher",
+        "publisherDesc": "Kann Fähigkeiten veröffentlichen und verwalten"
+      },
+      "editPermission": "Berechtigung bearbeiten",
+      "rolePermissions": "Rollenberechtigungen",
+      "userRoleAssignment": "Benutzerrollenzuweisung",
+      "currentRole": "Aktuelle Rolle",
+      "availableRoles": "Verfügbare Rollen",
+      "update": "Aktualisieren",
+      "siteSettings": "Website-Einstellungen",
+      "siteTitle": "Website-Titel",
+      "siteDescription": "Website-Beschreibung",
+      "securitySettings": "Sicherheitseinstellungen",
+      "require2FA": "Zwei-Faktor-Authentifizierung erforderlich",
+      "require2FADesc": "Erzwingt, dass alle Benutzer die Zwei-Faktor-Authentifizierung aktivieren",
+      "enableEmailVerification": "E-Mail-Verifizierung aktivieren",
+      "enableEmailVerificationDesc": "Benutzer müssen ihre E-Mail-Adressen bestätigen",
+      "toggle": "Umschalten",
+      "uploadSettings": "Upload-Einstellungen",
+      "maxFileSize": "Maximale Dateigröße (MB)",
+      "allowedFileTypes": "Erlaubte Dateitypen",
+      "maintenanceMode": "Wartungsmodus",
+      "siteMaintenance": "Seite in den Wartungsmodus versetzen",
+      "siteMaintenanceDesc": "Vorübergehend den Zugriff auf die Seite für Wartungsarbeiten deaktivieren",
+      "searchSkills": "Fähigkeiten suchen...",
+      "allStatus": "Alle Status",
+      "published": "Veröffentlicht",
+      "pending": "Ausstehend",
+      "rejected": "Abgelehnt",
+      "draft": "Entwurf",
+      "archived": "Archiviert",
+      "downloads": "Downloads",
+      "createdAt": "Erstellt am",
+      "view": "Anzeigen",
+      "skillStatus": {
+        "published": "Veröffentlicht",
+        "pending": "Ausstehend",
+        "rejected": "Abgelehnt",
+        "draft": "Entwurf",
+        "archived": "Archiviert"
+      },
+      "noSkillsFound": "Keine Fähigkeiten gefunden",
+      "noUsersFound": "Keine Benutzer gefunden",
+      "updateSuccess": "Erfolgreich aktualisiert",
+      "deleteSuccess": "Erfolgreich gelöscht",
+      "blogsDesc": "Blog-Beiträge verwalten und bearbeiten",
+      "createBlog": "Blog erstellen",
+      "editBlog": "Blog bearbeiten",
+      "noBlogs": "Noch keine Blogs",
+      "titlePlaceholder": "Blog-Titel eingeben",
+      "slug": "URL-Slug",
+      "slugPlaceholder": "Automatisch generieren oder manuell eingeben",
+      "generateSlug": "Generieren",
+      "excerpt": "Auszug",
+      "excerptPlaceholder": "Blog-Auszug (optional)",
+      "contentType": "Inhaltstyp",
+      "contentPlaceholder": "Blog-Inhalt eingeben...",
+      "preview": "Vorschau",
+      "coverImage": "Titelbild-URL",
+      "coverImagePlaceholder": "Bild-URL eingeben",
+      "tags": "Tags",
+      "tagsPlaceholder": "Mit Komma trennen, z.B.: Tech, Tutorial",
+      "featured": "Empfohlen",
+      "seo": "SEO-Einstellungen",
+      "seoTitle": "SEO-Titel",
+      "seoTitlePlaceholder": "SEO-Titel (optional)",
+      "seoDescription": "SEO-Beschreibung",
+      "seoDescriptionPlaceholder": "SEO-Beschreibung (optional)",
+      "title": "Titel",
+      "author": "Autor",
+      "status": "Status",
+      "views": "Aufrufe",
+      "createdAt": "Erstellt am",
+      "actions": "Aktionen",
+      "categories": "Kategorien verwalten",
+      "addCategory": "Kategorie hinzufügen",
+      "editCategory": "Kategorie bearbeiten",
+      "noCategories": "Keine Kategorien gefunden",
+      "active": "Aktiv",
+      "inactive": "Inaktiv",
+      "category": {
+        "name": "Kategoriename",
+        "displayName": "Anzeigename",
+        "description": "Beschreibung",
+        "icon": "Symbol",
+        "order": "Reihenfolge",
+        "status": "Status"
+      },
+      "categoryLabel": "Kategorie",
+      "resource": "Ressource",
+      "resourceHint": "Ressourcentyp, z.B.: skill, user, category",
+      "action": "Aktion",
+      "actionHint": "Aktionstyp: create（Erstellen）、read（Lesen）、update（Aktualisieren）、delete（Löschen）、manage（Verwalten）",
+      "actionLabels": {
+        "create": "Erstellen",
+        "read": "Lesen",
+        "update": "Aktualisieren",
+        "delete": "Löschen",
+        "manage": "Verwalten"
+      },
+      "permissionNameHint": "Berechtigungsname, normalerweise im Format: resource_action, z.B. skill_create",
+      "permissionDescPlaceholder": "Berechtigungsbeschreibung, erklären Sie, wofür diese Berechtigung verwendet wird"
+    },
+    "common": {
+      "previous": "Vorherige",
+      "next": "Nächste",
+      "loading": "Wird geladen...",
+      "error": "Fehler",
+      "success": "Erfolg",
+      "cancel": "Abbrechen",
+      "close": "Schließen",
+      "ok": "OK",
+      "confirm": "Bestätigen",
+      "deleteConfirm": "Sind Sie sicher, dass Sie dies löschen möchten? Diese Aktion kann nicht rückgängig gemacht werden.",
+      "save": "Speichern",
+      "saving": "Wird gespeichert...",
+      "download": "Herunterladen",
+      "actions": "Aktionen",
+      "create": "Erstellen",
+      "update": "Aktualisieren",
+      "back": "Zurück"
+    },
+    "editor": {
+      "insertImage": "Bild einfügen",
+      "insertImageDesc": "Bild hochladen oder Bild-URL eingeben",
+      "upload": "Hochladen",
+      "url": "URL",
+      "insert": "Einfügen",
+      "clickOrDrag": "Klicken oder Bild hierher ziehen",
+      "imageFormatHint": "Unterstützt JPG, PNG, GIF usw., max. 5MB",
+      "uploading": "Wird hochgeladen...",
+      "clickToChange": "Klicken, um Bild zu ändern",
+      "imageUrl": "Bild-URL",
+      "invalidImageType": "Bitte wählen Sie eine Bilddatei aus",
+      "imageTooLarge": "Bildgröße darf 5MB nicht überschreiten",
+      "uploadSuccess": "Bild erfolgreich hochgeladen",
+      "uploadFailed": "Bild-Upload fehlgeschlagen",
+      "urlRequired": "Bitte geben Sie die Bild-URL ein",
+      "invalidUrl": "Bitte geben Sie eine gültige URL ein",
+      "toolbar": {
+        "bold": "Fett (Strg+B)",
+        "italic": "Kursiv (Strg+I)",
+        "underline": "Unterstrichen (Strg+U)",
+        "strikethrough": "Durchgestrichen",
+        "highlight": "Hervorheben",
+        "textColor": "Textfarbe",
+        "heading1": "Überschrift 1",
+        "heading2": "Überschrift 2",
+        "heading3": "Überschrift 3",
+        "heading4": "Überschrift 4",
+        "heading5": "Überschrift 5",
+        "heading6": "Überschrift 6",
+        "paragraph": "Absatz",
+        "bulletList": "Aufzählungsliste",
+        "orderedList": "Nummerierte Liste",
+        "blockquote": "Zitat",
+        "codeBlock": "Code-Block",
+        "alignLeft": "Linksbündig",
+        "alignCenter": "Zentriert",
+        "alignRight": "Rechtsbündig",
+        "alignJustify": "Blocksatz",
+        "insertImage": "Bild einfügen",
+        "linkUrl": "Link-URL",
+        "setLink": "Link setzen",
+        "undo": "Rückgängig (Strg+Z)",
+        "redo": "Wiederholen (Strg+Shift+Z)"
+      }
+    },
+    "pagination": {
+      "pageInfo": "Seite {{currentPage}} von {{totalPages}}",
+      "prev": "Vorherige",
+      "next": "Nächste"
+    },
+    "contact": {
+      "title": "Kontaktieren Sie uns",
+      "subtitle": "Wir freuen uns über Ihr Feedback und Ihre Vorschläge",
+      "getInTouch": "Kontakt aufnehmen",
+      "email": "E-Mail",
+      "feedback": "Feedback",
+      "feedbackDesc": "Senden Sie Ihr Feedback über das untenstehende Formular",
+      "website": "Website",
+      "sendMessage": "Nachricht senden",
+      "name": "Name",
+      "namePlaceholder": "Bitte geben Sie Ihren Namen ein",
+      "emailPlaceholder": "ihre@email.com",
+      "subject": "Betreff",
+      "subjectPlaceholder": "Bitte geben Sie den Betreff ein",
+      "message": "Nachricht",
+      "messagePlaceholder": "Bitte geben Sie Ihre Nachricht ein...",
+      "send": "Senden",
+      "sending": "Wird gesendet...",
+      "submitSuccess": "Nachricht gesendet! Wir werden uns so schnell wie möglich bei Ihnen melden."
+    },
+    "privacy": {
+      "title": "Datenschutzrichtlinie",
+      "lastUpdated": "Zuletzt aktualisiert: 1. Januar 2024",
+      "introduction": {
+        "title": "1. Einführung",
+        "content": "BotSkill (\"wir\", \"unser\" oder \"diese Plattform\") ist dem Schutz Ihrer Privatsphäre verpflichtet. Diese Datenschutzrichtlinie erklärt, wie wir Ihre persönlichen Informationen sammeln, verwenden, speichern und schützen."
+      },
+      "dataCollection": {
+        "title": "2. Informationssammlung",
+        "content": "Wir können folgende Arten von Informationen sammeln:",
+        "item1": "Kontoinformationen: Benutzername, E-Mail-Adresse, Passwort (verschlüsselt gespeichert)",
+        "item2": "Profilinformationen: Name, Avatar, Biografie und andere optionale Informationen",
+        "item3": "Nutzungsdaten: Zugriffsprotokolle, Download-Protokolle, Suchverlauf usw.",
+        "item4": "Technische Informationen: IP-Adresse, Browsertyp, Geräteinformationen usw."
+      },
+      "dataUse": {
+        "title": "3. Informationsverwendung",
+        "content": "Wir verwenden die gesammelten Informationen für folgende Zwecke:",
+        "item1": "Bereitstellung, Wartung und Verbesserung unserer Dienste",
+        "item2": "Bearbeitung Ihrer Anfragen und Transaktionen",
+        "item3": "Versendung wichtiger Benachrichtigungen und Updates",
+        "item4": "Analyse der Nutzung zur Verbesserung der Benutzererfahrung",
+        "item5": "Erkennung und Verhinderung von Betrug, Missbrauch und Sicherheitsproblemen"
+      },
+      "dataSharing": {
+        "title": "4. Informationsweitergabe",
+        "content": "Wir verkaufen, handeln oder vermieten Ihre persönlichen Informationen nicht an Dritte. Wir können Informationen in folgenden Fällen weitergeben:",
+        "item1": "Mit Ihrer ausdrücklichen Zustimmung",
+        "item2": "Rechtliche Anforderungen oder als Reaktion auf Rechtsverfahren",
+        "item3": "Zum Schutz unserer Rechte, unseres Eigentums oder unserer Sicherheit",
+        "item4": "Weitergabe an Dienstleister (unter Wahrung der Vertraulichkeit)"
+      },
+      "dataSecurity": {
+        "title": "5. Datensicherheit",
+        "content": "Wir verwenden branchenübliche Sicherheitsmaßnahmen zum Schutz Ihrer persönlichen Informationen, einschließlich verschlüsselter Übertragung, sicherer Speicherung und Zugriffskontrollen. Keine Methode der Internetübertragung oder -speicherung ist jedoch 100% sicher."
+      },
+      "yourRights": {
+        "title": "6. Ihre Rechte",
+        "content": "Sie haben das Recht:",
+        "item1": "Auf Ihre persönlichen Informationen zuzugreifen, sie zu aktualisieren oder zu löschen",
+        "item2": "Ihre Zustimmung zur Datenverarbeitung zu widerrufen",
+        "item3": "Datenexport anzufordern",
+        "item4": "Beschwerden einzureichen oder Fragen zu stellen"
+      },
+      "cookies": {
+        "title": "7. Cookies und Tracking-Technologien",
+        "content": "Wir verwenden Cookies und ähnliche Technologien zur Verbesserung der Benutzererfahrung, Analyse der Nutzung und Bereitstellung personalisierter Inhalte. Sie können Cookie-Einstellungen über Ihre Browsereinstellungen verwalten."
+      },
+      "changes": {
+        "title": "8. Richtlinienänderungen",
+        "content": "Wir können diese Datenschutzrichtlinie von Zeit zu Zeit aktualisieren. Wesentliche Änderungen werden per E-Mail oder Website-Ankündigungen mitgeteilt. Die fortgesetzte Nutzung unserer Dienste bedeutet, dass Sie die aktualisierte Richtlinie akzeptieren."
+      },
+      "contact": {
+        "title": "9. Kontaktieren Sie uns",
+        "content": "Wenn Sie Fragen oder Bedenken zu dieser Datenschutzrichtlinie haben, kontaktieren Sie uns bitte über:",
+        "email": "E-Mail: "
+      }
+    },
+    "terms": {
+      "title": "Nutzungsbedingungen",
+      "lastUpdated": "Zuletzt aktualisiert: 1. Januar 2024",
+      "acceptance": {
+        "title": "1. Annahme der Bedingungen",
+        "content": "Durch den Zugriff auf und die Nutzung der BotSkill-Plattform (\"Dienst\") stimmen Sie zu, an diese Nutzungsbedingungen gebunden zu sein und sie einzuhalten. Wenn Sie diesen Bedingungen nicht zustimmen, verwenden Sie bitte unseren Dienst nicht."
+      },
+      "description": {
+        "title": "2. Dienstbeschreibung",
+        "content": "BotSkill ist eine Plattform zum Teilen von Fähigkeiten, die es Benutzern ermöglicht, Fähigkeiten zu entdecken, herunterzuladen und zu veröffentlichen. Wir behalten uns das Recht vor, den Dienst jederzeit ohne vorherige Ankündigung zu ändern, auszusetzen oder zu beenden."
+      },
+      "account": {
+        "title": "3. Benutzerkonten",
+        "content": "Für bestimmte Funktionen ist die Erstellung eines Kontos erforderlich. Sie stimmen zu:",
+        "item1": "Genaue, vollständige und aktuelle Informationen bereitzustellen",
+        "item2": "Die Sicherheit und Vertraulichkeit Ihrer Kontoinformationen zu gewährleisten",
+        "item3": "Für alle Aktivitäten unter Ihrem Konto verantwortlich zu sein",
+        "item4": "Uns sofort über unbefugte Nutzung zu benachrichtigen"
+      },
+      "userContent": {
+        "title": "4. Benutzerinhalte",
+        "content": "Sie behalten alle Rechte an den Inhalten, die Sie auf die Plattform hochladen. Durch das Hochladen von Inhalten gewähren Sie uns:",
+        "item1": "Eine Lizenz zur weltweiten Nutzung, Vervielfältigung, Verbreitung und Anzeige der Inhalte",
+        "item2": "Das Recht, Inhalte zu ändern, um sie an das Plattformformat anzupassen",
+        "item3": "Das Recht, Inhalte zu entfernen, die gegen diese Bedingungen verstoßen"
+      },
+      "prohibited": {
+        "title": "5. Verbotenes Verhalten",
+        "content": "Sie stimmen zu, nicht:",
+        "item1": "Illegale, schädliche, bedrohliche, beleidigende, belästigende, diffamierende, vulgäre oder anderweitig anstößige Inhalte hochzuladen",
+        "item2": "Die Rechte des geistigen Eigentums Dritter zu verletzen",
+        "item3": "Malware, Viren oder anderen schädlichen Code zu verbreiten",
+        "item4": "Unbefugten Zugriff auf Systeme oder Daten zu versuchen",
+        "item5": "Den normalen Betrieb des Dienstes zu stören oder zu unterbrechen"
+      },
+      "intellectualProperty": {
+        "title": "6. Geistiges Eigentum",
+        "content": "Die Plattform und alle ihre Inhalte (einschließlich, aber nicht beschränkt auf Text, Grafiken, Logos, Symbole, Bilder, Audioclips, digitale Downloads und Software) sind Eigentum von BotSkill oder seinen Inhaltsanbietern und durch Urheberrecht, Markenrecht und andere Gesetze zum geistigen Eigentum geschützt."
+      },
+      "disclaimer": {
+        "title": "7. Haftungsausschluss",
+        "content": "Der Dienst wird \"wie besehen\" und \"wie verfügbar\" bereitgestellt. Wir garantieren nicht, dass der Dienst unterbrechungsfrei, rechtzeitig, sicher oder fehlerfrei sein wird. Wir haften nicht für direkte, indirekte, zufällige oder Folgeschäden."
+      },
+      "termination": {
+        "title": "8. Kündigung",
+        "content": "Wir behalten uns das Recht vor, Ihr Konto und den Zugang zum Dienst jederzeit ohne vorherige Ankündigung zu kündigen oder zu sperren, einschließlich, aber nicht beschränkt auf Verstöße gegen diese Nutzungsbedingungen."
+      },
+      "changes": {
+        "title": "9. Änderungen der Bedingungen",
+        "content": "Wir behalten uns das Recht vor, diese Nutzungsbedingungen jederzeit zu ändern. Wesentliche Änderungen werden per E-Mail oder Website-Ankündigungen mitgeteilt. Die fortgesetzte Nutzung des Dienstes bedeutet, dass Sie die geänderten Bedingungen akzeptieren."
+      },
+      "contact": {
+        "title": "10. Kontaktieren Sie uns",
+        "content": "Wenn Sie Fragen zu diesen Nutzungsbedingungen haben, kontaktieren Sie uns bitte über:",
+        "email": "E-Mail: "
+      }
+    },
+    "license": {
+      "title": "Lizenz",
+      "subtitle": "BotSkill-Plattform-Lizenzinformationen",
+      "platform": {
+        "title": "Plattform-Lizenz",
+        "content": "Die BotSkill-Plattform selbst ist urheberrechtlich geschützt, alle Rechte vorbehalten. Kein Teil der Plattform darf ohne ausdrückliche schriftliche Genehmigung kopiert, geändert, verteilt oder verwendet werden."
+      },
+      "skills": {
+        "title": "Fähigkeitslizenzen",
+        "content": "Auf der Plattform veröffentlichte Fähigkeiten können verschiedene Lizenzen verwenden. Jede Fähigkeit sollte ihre Lizenz in der SKILL.md-Datei klar angeben. Häufige Lizenzen sind:",
+        "mit": "Erlaubt kommerzielle und nicht-kommerzielle Nutzung, Änderung und Verbreitung",
+        "apache": "Ähnlich wie MIT, enthält aber Patentrechte",
+        "gpl": "Erfordert, dass abgeleitete Werke auch die GPL-Lizenz verwenden",
+        "bsd": "Erlaubt Nutzung, erfordert aber die Beibehaltung des Urheberrechtshinweises",
+        "proprietary": "Proprietäre Lizenz mit eingeschränkter Nutzung"
+      },
+      "userRights": {
+        "title": "Benutzerrechte",
+        "content": "Als Benutzer haben Sie das Recht:",
+        "item1": "Fähigkeiten gemäß ihren Lizenzen herunterzuladen und zu verwenden",
+        "item2": "Den Quellcode von Fähigkeiten anzuzeigen (falls bereitgestellt)",
+        "item3": "Fähigkeiten gemäß ihren Lizenzen zu ändern und zu verteilen",
+        "item4": "Lizenzverstöße zu melden"
+      },
+      "publisherRights": {
+        "title": "Veröffentlichungsrechte",
+        "content": "Als Veröffentlicher:",
+        "item1": "Behalten Sie alle Rechte an den von Ihnen veröffentlichten Fähigkeiten",
+        "item2": "Können Sie jede Open-Source- oder proprietäre Lizenz wählen",
+        "item3": "Können Sie Ihre Fähigkeiten jederzeit aktualisieren oder löschen",
+        "item4": "Sind Sie für die von Ihnen veröffentlichten Inhalte verantwortlich und stellen sicher, dass keine Rechte Dritter verletzt werden"
+      },
+      "compliance": {
+        "title": "Compliance",
+        "content": "Alle Benutzer und Veröffentlicher müssen:",
+        "item1": "Die Lizenzbedingungen jeder Fähigkeit respektieren",
+        "item2": "Bei der Nutzung von Fähigkeiten alle geltenden Gesetze und Vorschriften einhalten",
+        "item3": "Keine Fähigkeiten veröffentlichen, die das geistige Eigentum anderer verletzen",
+        "item4": "Lizenzinformationen in Fähigkeiten klar angeben"
+      },
+      "violations": {
+        "title": "Lizenzverstöße",
+        "content": "Wenn wir Lizenzverstöße feststellen, behalten wir uns vor:",
+        "item1": "Verstößende Inhalte zu entfernen",
+        "item2": "Verstößende Konten zu sperren oder zu kündigen",
+        "item3": "Mit Rechtsverfahren zusammenzuarbeiten"
+      },
+      "contact": {
+        "title": "Kontaktieren Sie uns",
+        "content": "Wenn Sie Fragen zu Lizenzen haben oder Verstöße melden müssen, kontaktieren Sie uns bitte über:",
+        "email": "E-Mail: "
+      }
+    },
+    "footer": {
+      "description": "Wir verbinden Entwickler und intelligente Fähigkeiten, um Technologie zugänglicher zu machen.",
+      "product": {
+        "title": "Produkt",
+        "cli": "CLI-Tool"
+      },
+      "company": {
+        "title": "Unternehmen",
+        "contact": "Kontaktieren Sie uns"
+      },
+      "legal": {
+        "title": "Rechtliches",
+        "privacy": "Datenschutzbestimmungen",
+        "terms": "Nutzungsbedingungen",
+        "license": "Lizenz"
+      },
+      "copyright": "Alle Rechte vorbehalten."
+    }
+  }
+}
